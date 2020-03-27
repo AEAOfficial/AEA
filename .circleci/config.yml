@@ -1,27 +1,23 @@
 version: 2.1
 orbs:
+  node: circleci/node@1.1.6
   heroku: circleci/heroku@0.0.10. # Invoke the Heroku orb
-  
 jobs:
-  build:
-    docker:
-      - image: circleci/node:11.10.1
+  build-and-test:
+    executor:
+      name: node/default
     steps:
       - checkout
-      - run: node bot.js
-  test:
-    docker:
-      - image: circleci/node
-    steps:
-      - checkout
-      - run: node bot.js
+      - node/with-cache:
+          steps:
+            - run: node bot.js
 workflows:
   heroku_deploy:
     jobs:
-      - build
+      - build-and-test
       - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
           requires:
-            - build
+            - build-and-test
           filters:
             branches:
               only: master
