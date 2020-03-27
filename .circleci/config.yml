@@ -1,23 +1,24 @@
 version: 2.1
-orbs:
-  node: circleci/node@1.1.6
-  heroku: circleci/heroku@0.0.10. # Invoke the Heroku orb
 jobs:
-  build-and-test:
-    executor:
-      name: node/default
+  build:
+    working_directory: ~/mern-starter
+    docker:
+      - image: circleci/node:10.16.3
+      - image: mongo:4.2.0
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: node bot.js
-workflows:
-  heroku_deploy:
-    jobs:
-      - build-and-test
-      - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
-          requires:
-            - build-and-test
-          filters:
-            branches:
-              only: master
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@5'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+      - run:
+          name: install-npm-wee
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: test
+          command: npm test
