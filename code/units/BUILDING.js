@@ -516,18 +516,18 @@ if (message.content.toLowerCase() === 'missileturret') {
         message.channel.send(a15);
     }
 
-    if (message.content.toLowerCase() === 'subturretT1') {
+    if (message.content.toLowerCase() === 'subturrett1') {
         if(message.author.bot) return;
         message.channel.send(a16);
     }
 
-    if (message.content.toLowerCase() === 'subturretT2') {
+    if (message.content.toLowerCase() === 'subturrett2') {
         if(message.author.bot) return;
         message.channel.send(a17);
     }
 		
 		
-    if (message.content.toLowerCase() === 'subturretT3') {
+    if (message.content.toLowerCase() === 'subturrett3') {
         if(message.author.bot) return;
         message.channel.send(a18);
     }	
