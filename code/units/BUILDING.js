@@ -20,7 +20,7 @@ exports.code = function(){
 	.setAuthor('Lemons#5444', 'https://i.imgur.com/9wxw0Sg.png')
 	.setDescription("A list of all turrets to be typed and displayed")
 	
-	.addField("Turrets", "T1Turret \n T2Turret \n T3Turret \n ArtilleryTurret \n FlameTurret \n RocketTurret \n MissileTurret  \n BunkerTurret \n LightCannon\n HeavyCannon\n T1SamTurret\n T2SamTurret\n T3SamTurret\n EMPAATurret\n FlakTurret")
+	.addField("Turrets", "T1Turret \n T2Turret \n T3Turret \n ArtilleryTurret \n FlameTurret \n RocketTurret \n MissileTurret  \n BunkerTurret \n LightCannon\n HeavyCannon\n T1SamTurret\n T2SamTurret\n T3SamTurret\n EMPAATurret\n FlakTurret\n subturretT1\n subturretT2\n subturretT3")
     .setThumbnail('https://cdn.discordapp.com/icons/606586202942079017/7eafb97b0aa80cecb8e4a9f0a7f87c21.webp?size=128')
 	.setTimestamp()
     .setFooter('Edited by: SkaarjLord', 'https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128');
@@ -516,9 +516,24 @@ if (message.content.toLowerCase() === 'missileturret') {
         message.channel.send(a15);
     }
 
+    if (message.content.toLowerCase() === 'subturretT1') {
+        if(message.author.bot) return;
+        message.channel.send(a16);
+    }
 
-
-
+    if (message.content.toLowerCase() === 'subturretT2') {
+        if(message.author.bot) return;
+        message.channel.send(a17);
+    }
+		
+		
+    if (message.content.toLowerCase() === 'subturretT3') {
+        if(message.author.bot) return;
+        message.channel.send(a18);
+    }	
+		
+		
+		
 
     if (message.content.toLowerCase() === '/list turrets' || message.content.toLowerCase() === '/list turret') {
         message.channel.send(tlist);
