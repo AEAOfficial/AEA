@@ -364,7 +364,7 @@ exports.code = function(){
 	.setColor('#1500f7')
 	.setTitle('Sub Turret t2')
 	.setURL('')
-	.attachFiles(['./resources/subturrett2.png'])
+	.attachFiles(['./resources/subturretT2.png'])
 	.setAuthor('justasweetstrawberry[🇵🇭]#5774', 'https://imgur.com/TlX2rnJ.png')
 	.setDescription("- Short range heavy splash damage\n- The bane of gunships")
 	
