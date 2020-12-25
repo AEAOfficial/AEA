@@ -5,6 +5,10 @@ client.setMaxListeners(0)
 //imports from other files
 
 
+//music
+const music = require('music.js');
+
+
 //Units
 
 const Sea = require('./units/WATER.js');
@@ -162,6 +166,10 @@ if(fivevfive && Client){
   if(teams && Client){
     jq.code();
     console.log("Tournament loaded");
+  }
+  if(music && Client){
+    music.code();
+    console.log('Music loaded');
   }
  
 }
