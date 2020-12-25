@@ -14,10 +14,10 @@ client.filters = client.config.filters;
 client.commands = new discord.Collection();
 
 fs.readdirSync('./commands').forEach(dirs => {
-    const commands = fs.readdirSync(`./commands/${dirs}`).filter(files => files.endsWith('.js'));
+    const commands = fs.readdirSync(`./commands/`).filter(files => files.endsWith('.js'));
 
     for (const file of commands) {
-        const command = require(`./commands/${dirs}/${file}`);
+        const command = require(`./commands/${file}`);
         console.log(`Loading command ${file}`);
         client.commands.set(command.name.toLowerCase(), command);
     };
