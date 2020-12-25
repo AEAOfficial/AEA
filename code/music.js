@@ -13,7 +13,7 @@ client.emotes = client.config.emojis;
 client.filters = client.config.filters;
 client.commands = new discord.Collection();
 
-fs.readdirSync(__dirname + './commands').forEach(dirs => {
+fs.readdirSync(__dirname + '/commands').forEach(dirs => {
     const commands = fs.readdirSync(`./commands/`).filter(files => files.endsWith('.js'));
 
     for (const file of commands) {
