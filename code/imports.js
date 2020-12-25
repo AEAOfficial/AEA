@@ -167,10 +167,10 @@ if(fivevfive && Client){
     jq.code();
     console.log("Tournament loaded");
   }
-  
+  /*
   if(music && Client){
     music.code();
     console.log('Music loaded');
   }
- 
+ */
 }
