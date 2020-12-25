@@ -93,7 +93,7 @@ exports.code = function(){
         .setURL('')
         .attachFiles(['./resources/NuclearDrone.png'])
         .setAuthor('Lemons#5444', 'https://i.imgur.com/9wxw0Sg.png')
-        .setDescription(' - Nuclear drone, an unmanned shuttle that has 50T nuclear warhead inside of it's hull.\n - Easy to destroy\n- Good for air spam control\n - Can only have 2 built at a time.\n- Bruh.')
+        .setDescription(' - Nuclear drone, an unmanned shuttle that has 50T nuclear warhead inside of it\'s hull.\n - Easy to destroy\n- Good for air spam control\n - Can only have 2 built at a time.\n- Bruh.')
         
         .addField('Stats', 'Price $28,000 \n Health 2500 \n Attack Range 9 \n Move Speed 1.75 \n Build Speed 21.3s \n PrimaryAreaDamage/Radius 2500/225 \n InIclass NuclearDrone')
         .setThumbnail('https://cdn.discordapp.com/icons/606586202942079017/7eafb97b0aa80cecb8e4a9f0a7f87c21.webp?size=128')
