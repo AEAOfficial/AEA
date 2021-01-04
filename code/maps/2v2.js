@@ -37,7 +37,7 @@ function getRandomInt(min, max) {
           message.reply('Depth Charges');
     }
   if (x=== 5) {
-        const attachment = new MessageAttachmentt('./resources/map/[p4]Desert (4p)_map.png');
+        const attachment = new MessageAttachment('./resources/map/[p4]Desert (4p)_map.png');
         message.channel.send(attachment);
           message.reply('Desert');
     }
