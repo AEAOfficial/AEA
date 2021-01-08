@@ -170,11 +170,6 @@ if(message.content == '/muteall' && message.member.roles.cache.some(role => role
         }
     }
 
-    else
-    {
-        // do nothing
-    }
-
     if(message.content == '/unmuteall' && message.member.roles.cache.some(role => role.name === 'Developer')){
             let channel = message.member.voiceChannel;
             for (let member of channel.members) {
@@ -183,10 +178,6 @@ if(message.content == '/muteall' && message.member.roles.cache.some(role => role
             }
         }
 
-        else
-        {
-            // do nothing
-        }
     if(message.content == '/stop' && client.users.get("242687584373964801")){
 		message.channel.send('Shutting down...').then(m => {
         		client.destroy();
@@ -195,59 +186,36 @@ if(message.content == '/muteall' && message.member.roles.cache.some(role => role
     if(message.content == '/list'){
 	message.channel.send(clist);
     	}
-        else
-        {
-            // do nothing
-        }
+
     if(message.content == '/list Land' || message.content == '/list land'){
 	message.channel.send(llist);
     	}
-        else
-        {
-            // do nothing
-        }
+
     if(message.content == '/list Mech' || message.content == '/list mech'){
 	message.channel.send(mlist);
     	}
-        else
-        {
-            // do nothing
-        }
+
     if(message.content == '/list Air' || message.content == '/list air'){
 	message.channel.send(alist);
     	}
-        else
-        {
-            // do nothing
-        }
+
     if(message.content == '/list Water' || message.content == '/list water'){
 	message.channel.send(wlist);
     	}
-        else
-        {
-            // do nothing
-        }
+
     if(message.content == '/list Exp' || message.content == '/list exp'){
 	message.channel.send(EXlist);
     	}
-        else
-        {
-            // do nothing
-        }
-
+       
 
 
     if (message.content == '/stop' && client.users.get("242687584373964801") && message.member.roles.cache.some(role => role.name === 'Developer')){
     //process.exit();
     }
-    else{
-        // Do notta
-    }
-//tf?
-
+    
     
 	const attachment = new MessageAttachment('./resources/NuclearDrone.png');
-    if (message.content.includes('bruh') || message.content.includes('Bruh')) {
+    if (message.content.includes.roLowerCase() === 'bruh') {
 		message.channel.send(attachment);
     }
 
