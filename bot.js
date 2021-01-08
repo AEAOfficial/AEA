@@ -215,7 +215,7 @@ if(message.content == '/muteall' && message.member.roles.cache.some(role => role
     
     
 	const attachment = new MessageAttachment('./resources/NuclearDrone.png');
-    if (message.content.includes.roLowerCase() === 'bruh') {
+    if (message.content.includes.toLowerCase() === 'bruh') {
 		message.channel.send(attachment);
     }
 
