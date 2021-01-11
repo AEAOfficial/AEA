@@ -1,9 +1,8 @@
 
-const { Integer } = require('better-sqlite3');
 const { Client, MessageAttachment, RichEmbed } = require('discord.js');
 global.Discord = require('discord.js');
 global.client = new Discord.Client();
-var process = require('./process.env')
+
 client.setMaxListeners(0)
 
 const Imports = require('./code/imports.js');
@@ -12,9 +11,7 @@ const Imports = require('./code/imports.js');
     		console.log('Loading imports');
   }
 
-process.code();
-
-client.login(BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
 
 client.once('ready', () => {
 	console.log('Ready!');
@@ -116,33 +113,27 @@ const mlist = new Discord.MessageEmbed()
 
 
 
-client.on('message', (message, user) => {
+client.on('message', message => {
+if(message.content == '/purge'){
+	const messageArray = message.content.split(' ');
+	const args = messageArray.slice(1);
 
-var command = '/purge';
-if(message.content.startsWith(command)){
+    if (!message.member.permissions.has("MANAGE_MESSAGES")) return message.channel.send('You dont have perms to do that');
+    
+    let deleteAmount;
 
+    if (isNaN(args[0]) || parseInt(args[0]) <= 0) { return message.reply('Please type number!') }
 
+    if (parseInt(args[0]) > 99) {
+        return message.reply('You can not delete more than 99 messages')
+    } else {
+        deleteAmount = parseInt(args[0]);
+    }
 
-
-	if (!message.member.permissions.has("MANAGE_MESSAGES")) {
-		message.reply('You do not have permission to do that');
-		return;
-	}
-	const args = message.content.split(' ').slice(1);
-	const amount = args.join(' ');
-	if(!amount) {
-		message.reply('Put a number dumbass')
-	}
-	if (amount > 100) return messages.reply('You can`t delete more than 100 messages at once!'); 
-	if (amount < 1) return messages.reply('You have to delete at least 1 message!'); 
-	message.channel.bulkDelete(amount)
-	message.reply(`Deleted messages!`); 	
-	
-
-
-} 
-	
-
+    message.channel.bulkDelete(deleteAmount + 1, true);
+    message.reply(`Successfully Deleted ${deleteAmount} messages.`) 
+    }
+});
 
 
 //if(message.content == "/give" && client.users.get("242687584373964801") ){
