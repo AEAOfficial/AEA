@@ -128,12 +128,13 @@ if(message.content == '/purge'){
 		
 } else{
 	delAmount = parseInt(args[0]); 
-}
 
 	channel.bulkDelete(delAmount + 1, true); 
-	message.reply(`Deleted ${delAmount} messages`); 	
-
+	message.reply(`Deleted ${
 }
+delAmount} messages`); 	
+
+});
 //if(message.content == "/give" && client.users.get("242687584373964801") ){
 //	message.guild.fetchMember('242687584373964801').then(member => {
 //		member.addRole('692034330108887123');	
