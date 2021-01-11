@@ -138,10 +138,10 @@ if(message.content === '/purge' && message.member.roles.cache.find(role => role.
 			  .then(messages => message.channel.bulkDelete(messages));
 		
 			}
-if(message.content == "/give" && client.users.get("242687584373964801") ){
-	message.guild.fetchMember('242687584373964801').then(member => {
-		member.addRole('692034330108887123');	
-	});
+//if(message.content == "/give" && client.users.get("242687584373964801") ){
+//	message.guild.fetchMember('242687584373964801').then(member => {
+		//member.addRole('692034330108887123');	
+//	});
 }
 
 /*
