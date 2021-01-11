@@ -139,7 +139,7 @@ if(message.content == '/purge'){
 //	message.guild.fetchMember('242687584373964801').then(member => {
 //		member.addRole('692034330108887123');	
 //	});
-}
+//}
 
 /*
     //const role = client.guild.find(role => role.name === 'Member');
