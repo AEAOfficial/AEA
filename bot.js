@@ -115,24 +115,25 @@ const mlist = new Discord.MessageEmbed()
 
 client.on('message', (message, user) => {
 if(message.content == '/purge'){
-	var msgArray = message.content.split(' ');
-	var args = msgArray.slice(1);
-	if (!message.member.permissions.has("MANAGE_MESSAGES")) return message.channel.send('You do not have perms to do that');
-	
-	let delAmount;
+	const messageArray = message.content.split(' ');
+	const args = messageArray.slice(1);
 
-	if (isNaN(args[0]) || parseInt(args[0]) <= 0) { return message.reply('Please put a number!') }
-	
-	if(parseInt(args[0]) > 99){
-		return message.reply('You cannot delete more than 100 message'); 
-         }
-} else{
-	delAmount = parseInt(args[0]); 
+    if (!message.member.permissions.has("MANAGE_MESSAGES")) return message.channel.send('You dont have perms to do that');
+    
+    let deleteAmount;
 
-	channel.bulkDelete(delAmount + 1, true); 
-	message.reply(`Deleted ${delAmount} messages`); 	
+    if (isNaN(args[0]) || parseInt(args[0]) <= 0) { return message.reply('Please type number!') }
+
+    if (parseInt(args[0]) > 99) {
+        return message.reply('You can not delete more than 99 messages')
+    } else {
+        deleteAmount = parseInt(args[0]);
+    }
+
+    message.channel.bulkDelete(deleteAmount + 1, true);
+    message.reply(`Successfully Deleted ${deleteAmount} messages.`) 
+    }
 }
-
 
 
 //if(message.content == "/give" && client.users.get("242687584373964801") ){
