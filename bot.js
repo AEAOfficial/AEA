@@ -130,7 +130,7 @@ if(message.content == '/purge'){
 	delAmount = parseInt(args[0]); 
 }
 
-	message.channel.bulkDelete(delAmount + 1, true); 
+	channel.bulkDelete(delAmount + 1, true); 
 	message.reply(`Deleted ${delAmount} messages`); 	
 
 }
