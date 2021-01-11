@@ -133,7 +133,7 @@ if(message.content == '/purge'){
     message.channel.bulkDelete(deleteAmount + 1, true);
     message.reply(`Successfully Deleted ${deleteAmount} messages.`) 
     }
-}
+});
 
 
 //if(message.content == "/give" && client.users.get("242687584373964801") ){
