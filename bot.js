@@ -123,7 +123,7 @@ if(message.content == '/purge'){
 
 	if (isNaN(args[0]) || parseInt(args[0]) <= 0) { return message.reply('Please put a number!') }
 	
-	if(parseInt(args[0]) > 100){
+	if(parseInt(args[0]) > 99){
 		return message.reply('You cannot delete more than 100 message'); 
 		
 } else{
