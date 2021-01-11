@@ -116,7 +116,7 @@ const mlist = new Discord.MessageEmbed()
 client.on('message', (message, user) => {
 if(message.content == '/purge'){
 	const msgArray = message.content.split(' ');
-	const args = msgArray.slice(1);
+	var args = msgArray.slice(1);
 	if (!message.member.permissions.has("MANAGE_MESSAGES")) return message.channel.send('You do not have perms to do that');
 	
 	let delAmount;
