@@ -1,8 +1,9 @@
 
+const { Integer } = require('better-sqlite3');
 const { Client, MessageAttachment, RichEmbed } = require('discord.js');
 global.Discord = require('discord.js');
 global.client = new Discord.Client();
-
+var process = require('./process.env')
 client.setMaxListeners(0)
 
 const Imports = require('./code/imports.js');
@@ -11,7 +12,9 @@ const Imports = require('./code/imports.js');
     		console.log('Loading imports');
   }
 
-client.login(process.env.BOT_TOKEN);
+process.code();
+
+client.login(BOT_TOKEN);
 
 client.once('ready', () => {
 	console.log('Ready!');
@@ -114,24 +117,31 @@ const mlist = new Discord.MessageEmbed()
 
 
 client.on('message', (message, user) => {
-if(message.content == '/purge'){
-	var msgArray = message.content.split(' ');
-	var args = msgArray.slice(1);
-	if (!message.member.permissions.has("MANAGE_MESSAGES")) return message.channel.send('You do not have perms to do that');
-	
-	let delAmount;
 
-	if (isNaN(args[0]) || parseInt(args[0]) <= 0) { return message.reply('Please put a number!') }
-	
-	if(parseInt(args[0]) > 99){
-		return message.reply('You cannot delete more than 100 message'); 
-         }
-} else{
-	delAmount = parseInt(args[0]); 
+var command = '/purge';
+if(message.content.startsWith(command)){
 
-	channel.bulkDelete(delAmount + 1, true); 
-	message.reply(`Deleted ${delAmount} messages`); 	
-}
+
+
+
+	if (!message.member.permissions.has("MANAGE_MESSAGES")) {
+		message.reply('You do not have permission to do that');
+		return;
+	}
+	const args = message.content.split(' ').slice(1);
+	const amount = args.join(' ');
+	if(!amount) {
+		message.reply('Put a number dumbass')
+	}
+	if (amount > 100) return messages.reply('You can`t delete more than 100 messages at once!'); 
+	if (amount < 1) return messages.reply('You have to delete at least 1 message!'); 
+	message.channel.bulkDelete(amount)
+	message.reply(`Deleted messages!`); 	
+	
+
+
+} 
+	
 
 
 
