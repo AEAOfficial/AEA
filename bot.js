@@ -113,7 +113,7 @@ const mlist = new Discord.MessageEmbed()
 
 
 
-client.on('message', (message, user) => {
+client.on('message', (message, user, args) => {
 if(message.content == '/purge'){
 	if (!message.member.permissions.has("MANAGE_MESSAGES")) return message.channel.send('You do not have perms to do that');
 	
