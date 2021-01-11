@@ -125,16 +125,16 @@ if(message.content == '/purge'){
 	
 	if(parseInt(args[0]) > 99){
 		return message.reply('You cannot delete more than 100 message'); 
-		
+         }
 } else{
 	delAmount = parseInt(args[0]); 
 
 	channel.bulkDelete(delAmount + 1, true); 
-	message.reply(`Deleted ${
+	message.reply(`Deleted ${delAmount} messages`); 	
 }
-delAmount} messages`); 	
 
-});
+
+
 //if(message.content == "/give" && client.users.get("242687584373964801") ){
 //	message.guild.fetchMember('242687584373964801').then(member => {
 //		member.addRole('692034330108887123');	
