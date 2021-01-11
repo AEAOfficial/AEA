@@ -115,11 +115,11 @@ const mlist = new Discord.MessageEmbed()
 
 client.on('message', (message, user) => {
 if(message.content == '/purge'){
-	if (!message.member.permissions.has("MANAGE_MESSAGES")) return msg.channel.send('You do not have perms to do that');
+	if (!message.member.permissions.has("MANAGE_MESSAGES")) return message.channel.send('You do not have perms to do that');
 	
 	let delAmount;
 
-	if (isNaN(args[0]) || parseInt(args[0]) <= 0) { return msg.reply('Please put a number!') }
+	if (isNaN(args[0]) || parseInt(args[0]) <= 0) { return message.reply('Please put a number!') }
 	
 	if(parseInt(args[0]) > 100){
 		return message.reply('You cannot delete more than 100 message'); 
