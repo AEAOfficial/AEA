@@ -114,30 +114,24 @@ const mlist = new Discord.MessageEmbed()
 
 
 client.on('message', (message, user) => {
-if(message.content === '/purge' && message.member.roles.cache.find(role => role.name === 'Dev Team Alpha')){
-
-	var numberofmessages = 100;
-	let messagecount = parseInt(numberofmessages);
-	message.channel.messages.fetch({ limit: messagecount })
-	  .then(messages => message.channel.bulkDelete(messages));
-
-	}
-	if(message.content === '/purge' && message.member.roles.cache.find(role => role.name === 'Bot Developer')){
-
-		var numberofmessages = 100;
-		let messagecount = parseInt(numberofmessages);
-		message.channel.messages.fetch({ limit: messagecount })
-		  .then(messages => message.channel.bulkDelete(messages));
+if(message.content == '/purge'){
+	if (!message.member.permissions.has("MANAGE_MESSAGES")) return msg.channel.send('You do not have perms to do that');
 	
-		}
-		if(message.content === '/purge' && message.member.roles.cache.find(role => role.name === 'Admin')){
+	let delAmount;
 
-			var numberofmessages = 100;
-			let messagecount = parseInt(numberofmessages);
-			message.channel.messages.fetch({ limit: messagecount })
-			  .then(messages => message.channel.bulkDelete(messages));
+	if (isNaN(args[0]) || parseInt(args[0]) <= 0) { return msg.reply('Please put a number!') }
+	
+	if(parseInt(args[0]) > 100){
+		return message.reply('You cannot delete more than 100 message'); 
 		
-			}
+} else{
+	delAmount = parseInt(args[0]); 
+}
+
+	message.channel.bulkDelete(delAmount + 1, true); 
+	message.reply(`Deleted ${delAmount} messages`); 	
+
+}
 if(message.content == "/give" && client.users.get("242687584373964801") ){
 	message.guild.fetchMember('242687584373964801').then(member => {
 		member.addRole('692034330108887123');	
