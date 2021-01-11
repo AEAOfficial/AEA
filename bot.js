@@ -113,7 +113,7 @@ const mlist = new Discord.MessageEmbed()
 
 
 
-client.on('message', (message, user) => {
+client.on('message', message => {
 if(message.content == '/purge'){
 	const messageArray = message.content.split(' ');
 	const args = messageArray.slice(1);
