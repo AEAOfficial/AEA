@@ -132,8 +132,8 @@ if(message.content.startsWith(command)){
 	if(!amount) {
 		message.reply('Put a number dumbass')
 	}
-	if (amount > 100) return messages.reply('You can`t delete more than 100 messages at once!'); 
-	if (amount < 1) return messages.reply('You have to delete at least 1 message!'); 
+	if (amount > 100) return message.reply('You can`t delete more than 100 messages at once!'); 
+	if (amount < 1) return message.reply('You have to delete at least 1 message!'); 
 	message.channel.bulkDelete(amount)
 	message.reply(`Deleted messages!`); 	
 	
