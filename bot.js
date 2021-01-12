@@ -1,7 +1,7 @@
 const { Client, MessageAttachment, RichEmbed } = require('discord.js');
 global.Discord = require('discord.js');
 global.client = new Discord.Client();
-var process = require('./process.env')
+
 client.setMaxListeners(0)
 
 const Imports = require('./code/imports.js');
@@ -9,8 +9,8 @@ const Imports = require('./code/imports.js');
    		Imports.code();
     		console.log('Loading imports');
   }
-
-process.code();
+//var process = require('./process.env')
+//process.code();
 
 // Run locally, replace process.env
 client.login(process.env.BOT_TOKEN);
