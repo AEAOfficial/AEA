@@ -12,7 +12,8 @@ const Imports = require('./code/imports.js');
 
 process.code();
 
-client.login(BOT_TOKEN);
+// Run locally, replace process.env
+client.login(process.env.BOT_TOKEN);
 
 client.once('ready', () => {
 	console.log('Ready!');
