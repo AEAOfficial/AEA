@@ -1,5 +1,3 @@
-
-const { Integer } = require('better-sqlite3');
 const { Client, MessageAttachment, RichEmbed } = require('discord.js');
 global.Discord = require('discord.js');
 global.client = new Discord.Client();
