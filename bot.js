@@ -31,7 +31,7 @@ client.on('ready', () => {
 
 client.on('guildMemberAdd', member => {
 
-    const channel = member.guild.channels.find(ch => ch.name === 'general');
+    const channel = member.guild.channels.find(ch => ch.name === '》general');
     if (!channel) return;
     channel.send(`Welcome to AEA, ${member}!`);
 
