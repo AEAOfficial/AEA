@@ -30,13 +30,13 @@ client.on('ready', () => {
 });
 
 client.on('guildMemberAdd', member => {
-
+	let role = message.guild.roles.find(r => r.name === 'Member');
     const channel = member.guild.channels.find(ch => ch.name === '》general');
     if (!channel) return;
     channel.send(`Welcome to AEA, ${member}!`);
 
-    //const member = message.mentions.members.first();
-    //member.addRole(role);
+    const member = message.mentions.members.first();
+	member.addRole(role);
 });
 
 const talkedRecently = new Set();
