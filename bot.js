@@ -35,7 +35,7 @@ client.on('guildMemberAdd', member => {
     if (!channel) return;
     channel.send(`Welcome to AEA, ${member}!`);
 
-    const member = message.mentions.members.first();
+    member = message.mentions.members.first();
 	member.addRole(role);
 });
 
