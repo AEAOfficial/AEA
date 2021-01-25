@@ -16,13 +16,15 @@ const Mechs = require('./units/MECH.js');
 const vox = require('./units/INFANTRY - Vox777.js');
 const build = require('./units/BUILDING.js');
 */
+const loader = require('./units/!8128316LOADER.js')
+loader.code()
+obj.forEach(file => { 
+  units = require('./units/' + file);
+}); 
+console.log('Units Loaded')
+units.code()
 
 
-const UNIT = require('./units/!8128316LOADER.js');
-if(UNIT && Client){
-  UNIT.code()
-  console.log('Units Loaded')
-}
 // Random
 //const kd = require('./other/kd.js');
 const N = require('./other/Nword.js');
