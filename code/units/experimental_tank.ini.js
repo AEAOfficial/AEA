@@ -1,9 +1,9 @@
-exports.code = function(){     client.on('message', message => {
+exports.code = function(){ 
+    client.on('message', message => {
             if (message.content.toLowerCase() === 'experimentalsamtank') { 
               if(message.author.bot) return; 
               message.channel.send(experimentalSamTank); 
               }
-	  });
 const experimentalSamTank = new Discord.MessageEmbed() 
    .setColor('#1500f7') 
    .setAuthor('Lemons#5444', 'https://i.imgur.com/9wxw0Sg.png') 
@@ -25,13 +25,14 @@ const experimentalSamTank = new Discord.MessageEmbed()
    .addField('Turn Speed:  0.7')
    .setTimestamp() 
    .setFooter('SkaarjLord', 'https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128'); 
+	  });
 }
-exports.code = function(){     client.on('message', message => {
+exports.code = function(){ 
+    client.on('message', message => {
             if (message.content.toLowerCase() === 'cexperimentaltank') { 
               if(message.author.bot) return; 
               message.channel.send(cc_experimentalTank); 
               }
-	  });
 const cc_experimentalTank = new Discord.MessageEmbed() 
    .setColor('#1500f7') 
    .setAuthor('Lemons#5444', 'https://i.imgur.com/9wxw0Sg.png') 
@@ -54,4 +55,5 @@ const cc_experimentalTank = new Discord.MessageEmbed()
    .addField('Turn Speed:  0.7')
    .setTimestamp() 
    .setFooter('SkaarjLord', 'https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128'); 
+	  });
 }

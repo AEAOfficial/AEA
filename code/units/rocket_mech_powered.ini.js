@@ -1,9 +1,9 @@
-exports.code = function(){     client.on('message', message => {
+exports.code = function(){ 
+    client.on('message', message => {
             if (message.content.toLowerCase() === 'rocketmechpowered') { 
               if(message.author.bot) return; 
               message.channel.send(rocketMechPowered); 
               }
-	  });
 const rocketMechPowered = new Discord.MessageEmbed() 
    .setColor('#1500f7') 
    .setAuthor('Lemons#5444', 'https://i.imgur.com/9wxw0Sg.png') 
@@ -23,4 +23,5 @@ const rocketMechPowered = new Discord.MessageEmbed()
    .addField('Move Speed:  2.5')
    .setTimestamp() 
    .setFooter('SkaarjLord', 'https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128'); 
+	  });
 }

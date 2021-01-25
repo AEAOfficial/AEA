@@ -4,18 +4,7 @@ const fs = require('fs');
 client.setMaxListeners(0)
 
 
-//Units
-fs.readdir('/units', function(err, items) {
-  console.log(items)
-    for (var i=0; i < items.length; i++) {
-        var units = require('/units' + items[i]);
-    }
-        if(units && Client){
-            units.code();
-            console.log('All units loaded')
-        }
-    
-})
+
 
 
 /*
@@ -29,6 +18,11 @@ const build = require('./units/BUILDING.js');
 */
 
 
+const UNIT = require('./units/!8128316LOADER.js');
+if(UNIT && Client){
+  UNIT.code()
+  console.log('Units Loaded')
+}
 // Random
 //const kd = require('./other/kd.js');
 const N = require('./other/Nword.js');
@@ -41,6 +35,7 @@ const Func = require('./other/skaarjlord.js');
 
 
 const test = require('./other/Test.js');
+
 //const rukkit = require('./jars/rukkit.js')
 //const music = require('./jars/music/music.js')
 

@@ -1,9 +1,9 @@
-exports.code = function(){     client.on('message', message => {
+exports.code = function(){ 
+    client.on('message', message => {
             if (message.content.toLowerCase() === 'teslatank') { 
               if(message.author.bot) return; 
               message.channel.send(TeslaTank); 
               }
-	  });
 const TeslaTank = new Discord.MessageEmbed() 
    .setColor('#1500f7') 
    .setAuthor('Lemons#5444', 'https://i.imgur.com/9wxw0Sg.png') 
@@ -25,13 +25,14 @@ const TeslaTank = new Discord.MessageEmbed()
    .addField('Turn Speed:  1.4')
    .setTimestamp() 
    .setFooter('SkaarjLord', 'https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128'); 
+	  });
 }
-exports.code = function(){     client.on('message', message => {
+exports.code = function(){ 
+    client.on('message', message => {
             if (message.content.toLowerCase() === 'specmammothtank') { 
               if(message.author.bot) return; 
               message.channel.send(specMammothTank); 
               }
-	  });
 const specMammothTank = new Discord.MessageEmbed() 
    .setColor('#1500f7') 
    .setAuthor('Lemons#5444', 'https://i.imgur.com/9wxw0Sg.png') 
@@ -53,4 +54,5 @@ const specMammothTank = new Discord.MessageEmbed()
    .addField('Turn Speed:  1')
    .setTimestamp() 
    .setFooter('SkaarjLord', 'https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128'); 
+	  });
 }
