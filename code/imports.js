@@ -5,9 +5,9 @@ client.setMaxListeners(0)
 
 
 //Units
-fs.readdir('C:/Users/Lemons/Documents/GitHub/AEA/code/units/', function(err, items) {
+fs.readdir('./units/', function(err, items) {
     for (var i=0; i < items.length; i++) {
-        var units = require('C:/Users/Lemons/Documents/GitHub/AEA/code/units/' + items[i]);
+        var units = require('./units/' + items[i]);
     }
         if(units && Client){
             units.code();
