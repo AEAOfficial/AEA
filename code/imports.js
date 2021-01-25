@@ -5,10 +5,10 @@ client.setMaxListeners(0)
 
 
 //Units
-fs.readdir('./units', function(err, items) {
+fs.readdir('/units', function(err, items) {
   console.log(items)
     for (var i=0; i < items.length; i++) {
-        var units = require('./units' + items[i]);
+        var units = require('/units' + items[i]);
     }
         if(units && Client){
             units.code();
