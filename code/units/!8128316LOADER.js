@@ -4,5 +4,7 @@ exports.code = function(){
     obj = fs.readdirSync(__dirname); 
     obj.forEach(file => { 
         var units = require('./' + file);
+        units.code()
       }); 
+      
 }
