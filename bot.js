@@ -12,7 +12,7 @@ const Imports = require('./code/imports.js');
 //var process = require('./process.env')
 //process.code();
 
-// Run locally, replace process.env
+// Run locally, replace process.env.BOT_TOKEN
 client.login(process.env.BOT_TOKEN);
 
 client.once('ready', () => {

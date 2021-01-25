@@ -1,16 +1,23 @@
 exports.code = function(){
 const { Client, Attachment } = require('discord.js');
+const fs = require('fs');
 client.setMaxListeners(0)
-
-//imports from other files
-
-
-//music
-//const music = require('./music.js');
 
 
 //Units
+fs.readdir('C:/Users/Lemons/Documents/GitHub/AEA/code/units/', function(err, items) {
+    for (var i=0; i<items.length; i++) {
+        var units = require('C:/Users/Lemons/Documents/GitHub/AEA/code/units/' + items[i]);
+    }
+        if(units && Client){
+            units.code();
+            console.log('All units loaded')
+        }
+    
+})
 
+
+/*
 const Sea = require('./units/WATER.js');
 const exp = require('./units/EXP.js');
 const Anubis = require('./units/AIR - Anubis.js');
@@ -18,7 +25,7 @@ const Darkest = require('./units/LAND.js');
 const Mechs = require('./units/MECH.js');
 const vox = require('./units/INFANTRY - Vox777.js');
 const build = require('./units/BUILDING.js');
-
+*/
 
 
 // Random
@@ -74,40 +81,6 @@ if(fivevfive && Client){
   console.log('5v5s loaded');
 } 
 
-
-  // Units
-
-  if(Anubis && Client){
-   		 Anubis.code();
-    		console.log('Anubis loaded');
-  }
-
-  if(Darkest && Client){
-   		Darkest.code();
-    		console.log('Land loaded');
-  }
-
-  if(Sea && Client){
-   		Sea.code();
-    		console.log('Sea loaded');
-  }
-  
-  if(Mechs && Client){
-    Mechs.code();
-     console.log('Mechs loaded');
-  }
-  if(exp && Client){
-    exp.code();
-    console.log('Experimentals loaded');
-  }
-  if(vox && Client){
-    vox.code();
-    console.log('Infantry loaded');
-  }
-  if(build && Client){
-    build.code();
-    console.log('Buildings loaded');
-  }
   // Random
 
   if(N && Client){
