@@ -7,13 +7,14 @@ client.setMaxListeners(0)
 const Imports = require('./code/imports.js');
   if(Imports && Client){
    		Imports.code();
-    		console.log('Loading imports');
+    	console.log('Loading imports');
   }
-//var process = require('./process.env')
-//process.code();
+
+var process = require('./process.env')
+process.code();
 
 // Run locally, replace process.env.BOT_TOKEN
-client.login(procces.env.BOT_TOKEN);
+client.login(BOT_TOKEN);
 
 client.once('ready', () => {
 	console.log('Ready!');
@@ -48,7 +49,7 @@ const clist = new Discord.MessageEmbed()
 	.setAuthor('SkaarjLord', 'https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128')
 	.setThumbnail('https://camo.githubusercontent.com/7203f752f0f936475f4ac41dcd3ef9d93af9c2452176a05a1e2b081d1a255ef1/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f69636f6e732f3630363538363230323934323037393031372f34323362346662626563663162626164353566653631343638303337623334642e776562703f73697a653d313238')
     .addField('Use / for all commands any OTHER command won\'t work!',false)
-	.addField('/AEAElite', 'Assigns the AEAElites Role for anyone who wishes it...', false)
+	.addField('/AEAElite', 'Assigns the AEAElites Role for anyone who wishes it...')
 	.addField('/suggest', 'Puts a suggestion up for a vote in ❌-votes-✅ \nMust be in the suggestions channel!', false)
 	.addField('/<unit>', 'name of the unit (nospaces) \nLists the stats of a specified unit ', false)
 	.addField('/wvs <unit>', 'Gives weaknesses of a specified unit', false)
