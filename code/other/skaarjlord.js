@@ -32,13 +32,12 @@ let member = guild.member(message.author);
 let nickname = member ? member.displayName : null;
 let userava = message.author;
    const taco = message.content.split('/suggest').join('')
-         const a1 = new Discord.MessageEmbed()
+         var a1 = new Discord.MessageEmbed()
          	.setColor('#1500f7')
 	        .setTitle('New Suggestion!')
          	.setAuthor(nickname, userava.avatarURL)
 			.setDescription(taco)
 			.addField('Vote Options:','✅ or ❌')
-         	
          	.setURL('')
 	        .setThumbnail('https://cdn.discordapp.com/icons/606586202942079017/7eafb97b0aa80cecb8e4a9f0a7f87c21.webp?size=128')
          	.setTimestamp()
@@ -50,7 +49,7 @@ let userava = message.author;
 if(message.content.toLowerCase().startsWith('/suggest')){
 if (message.channel.id === '711753321106636830'){
 
-	let channel = message.member.guild.channels.cache.find(channel => channel.name === "❌-votes-✅")
+	var channel = message.member.guild.channels.cache.find(channel => channel.name === "❌-votes-✅")
 	if(!channel){
 
     	message.reply('The "❌-votes-✅" channel must exist')
@@ -58,7 +57,17 @@ if (message.channel.id === '711753321106636830'){
 	
 	
 	else {
-		message.member.guild.channels.cache.find(channel => channel.name === "❌-votes-✅").send(a1)
+		message.delete()
+		message = channel.send(a1).then(embedMessage => {
+			var react1 = embedMessage.react('❌')
+			var react2 = embedMessage.react('✅')
+			if (!react1)
+			react1.remove()
+			if (!react2)
+			react2.remove()
+		});
+
+		
 	}
 
 
