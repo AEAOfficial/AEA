@@ -47,7 +47,7 @@ let userava = message.author;
 //https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128
  if(message.author.bot) return; 
 
-if(message.content.toLowerCase().startsWith('+')){
+if(message.content.toLowerCase().startsWith('/suggest')){
 if (message.channel.id === '711753321106636830'){
 
 	let channel = message.member.guild.channels.cache.find(channel => channel.name === "❌-votes-✅")

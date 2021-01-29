@@ -13,7 +13,7 @@ const Imports = require('./code/imports.js');
 //process.code();
 
 // Run locally, replace process.env.BOT_TOKEN
-client.login(process.env.BOT_TOKEN);
+client.login(procces.env.BOT_TOKEN);
 
 client.once('ready', () => {
 	console.log('Ready!');
@@ -40,7 +40,7 @@ client.on('guildMemberAdd', member => {
 });
 
 const talkedRecently = new Set();
-// Land units
+
 const clist = new Discord.MessageEmbed()
 	.setColor('#1500f7')
 	.setTitle('Commands')
@@ -48,20 +48,18 @@ const clist = new Discord.MessageEmbed()
 	.setAuthor('SkaarjLord', 'https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128')
 	.setThumbnail('https://camo.githubusercontent.com/7203f752f0f936475f4ac41dcd3ef9d93af9c2452176a05a1e2b081d1a255ef1/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f69636f6e732f3630363538363230323934323037393031372f34323362346662626563663162626164353566653631343638303337623334642e776562703f73697a653d313238')
 	.addField('/AEAElite', 'Assigns the AEAElites Role for anyone who wishes it...', false)
-	.addField('/<Suggestion>', 'Puts a suggestion up for a vote in ❌-votes-✅ \n Must be in the suggestions channel!', false)
-	.addField('/list', 'Land, Air, Water, or Exp \n Lists all the units In a specified category', false)
+	.addField('/suggest', 'Puts a suggestion up for a vote in ❌-votes-✅ \n Must be in the suggestions channel!', false)
 	.addField('<unit>', 'name of the unit (nospaces) \n Lists the stats of a specified unit ', false)
 	.addField('/wvs <unit>', 'Gives weaknesses of a specified unit', false)
 	.addField('/tipme', 'Gives Tips For AEA', false)
-	//.addField('/teams2', 'A team organizer (still needs testing)', false)
 	.addField('/<#v#>', '1v1, 2v2, 2v3, 3v3, 4v4, 5v5 \n Gives a random map based on playercount', false)
 	.addField('/flipcoin', 'Heads or Tails?', false)
 	.addField('<time>', 'Set a timer for an amount of time \n (Max: 10m)', false)
-
-	//.addField('a', '<announcementtext>', false)
 	.setDescription('Lists all comands associated with the bot')
 	.setTimestamp()
 	.setFooter('More Soon!', 'https://camo.githubusercontent.com/7203f752f0f936475f4ac41dcd3ef9d93af9c2452176a05a1e2b081d1a255ef1/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f69636f6e732f3630363538363230323934323037393031372f34323362346662626563663162626164353566653631343638303337623334642e776562703f73697a653d313238');
+
+/*
 const llist = new Discord.MessageEmbed()
 	.setColor('#1500f7')
 	.setTitle('Land Units List')
@@ -112,7 +110,7 @@ const mlist = new Discord.MessageEmbed()
 	.setDescription('Lists all mech units')
 	.setTimestamp()
 	.setFooter('More Soon!', 'https://camo.githubusercontent.com/7203f752f0f936475f4ac41dcd3ef9d93af9c2452176a05a1e2b081d1a255ef1/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f69636f6e732f3630363538363230323934323037393031372f34323362346662626563663162626164353566653631343638303337623334642e776562703f73697a653d313238');
-
+*/
 
 
 client.on('message', (message, user) => {
