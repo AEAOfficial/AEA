@@ -31,12 +31,12 @@ let guild = client.guilds.cache.get('606586202942079017');
 let member = guild.member(message.author);
 let nickname = member ? member.displayName : null;
 let userava = message.author;
-   const taco = message.content
+   const taco = message.content.split('/suggest').join('')
          const a1 = new Discord.MessageEmbed()
          	.setColor('#1500f7')
 	        .setTitle('New Suggestion!')
          	.setAuthor(nickname, userava.avatarURL)
-			 .setDescription(taco)
+			.setDescription(taco)
 			.addField('Vote Options:','✅ or ❌')
          	
          	.setURL('')

@@ -193,28 +193,6 @@ if(message.content == '/muteall' && message.member.roles.cache.some(role => role
 	message.channel.send(clist);
     	}
 
-    if(message.content == '/list Land' || message.content == '/list land'){
-	message.channel.send(llist);
-    	}
-
-    if(message.content == '/list Mech' || message.content == '/list mech'){
-	message.channel.send(mlist);
-    	}
-
-    if(message.content == '/list Air' || message.content == '/list air'){
-	message.channel.send(alist);
-    	}
-
-    if(message.content == '/list Water' || message.content == '/list water'){
-	message.channel.send(wlist);
-    	}
-
-    if(message.content == '/list Exp' || message.content == '/list exp'){
-	message.channel.send(EXlist);
-    	}
-       
-
-
     if (message.content == '/stop' && client.users.get("242687584373964801") && message.member.roles.cache.some(role => role.name === 'Developer')){
     //process.exit();
     }
