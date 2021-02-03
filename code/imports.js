@@ -26,12 +26,12 @@ const N = require('./other/Nword.js');
 const weak = require('./other/weakness.js');
 const teams = require('./other/teams.js');
 const tips = require('./other/tips.js');
-const jq = require('./other/JQuery.js');
+const jq = require('./other/randomassign.js');
 const Timer = require('./other/timer.js');
 const Func = require('./other/skaarjlord.js');
 
 
-const test = require('./other/Test.js');
+const test = require('./other/randomassign.js');
 
 //const rukkit = require('./jars/rukkit.js')
 //const music = require('./jars/music/music.js')
@@ -102,7 +102,7 @@ if(fivevfive && Client){
   }
   if(test && Client){
     test.code();
-    console.log('Handbook loaded');
+    console.log('Random Assign loaded');
   }
   /*
   if(rukkit && Client){
@@ -129,16 +129,6 @@ if(fivevfive && Client){
     teams.code();
     console.log('Teams loaded');
   }
-  if(teams && Client){
-    jq.code();
-    console.log("Tournament loaded");
-  }
-  /*
-  if(music && Client){
-    music.code();
-    console.log('Music loaded');
-  }
- */
 
 var loader1 = require('./units/buzzard_gunship.ini.js');
 loader1.code()
