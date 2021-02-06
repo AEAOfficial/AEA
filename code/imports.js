@@ -26,10 +26,9 @@ const N = require('./other/Nword.js');
 const weak = require('./other/weakness.js');
 const teams = require('./other/teams.js');
 const tips = require('./other/tips.js');
-const jq = require('./other/randomassign.js');
 const Timer = require('./other/timer.js');
 const Func = require('./other/skaarjlord.js');
-
+const flip = require('./other/flipcoin.js');
 
 const test = require('./other/randomassign.js');
 
@@ -80,6 +79,10 @@ if(fivevfive && Client){
     N.code();
     console.log('Nword loaded');
   } 
+  if(flip && Client){
+    flip.code();
+    console.log('Flipcoin loaded');
+  }
 /*
   if(kd && Client){
     kd.code();
@@ -178,8 +181,6 @@ var loader24 = require('./units/duster_tank.ini.js');
 loader24.code()
 var loader25 = require('./units/heavy_hovertank.ini.js');
 loader25.code()
-var loader26 = require('./units/heavy_tank - original.ini.js');
-loader26.code()
 var loader27 = require('./units/heavy_tank.ini.js');
 loader27.code()
 var loader28 = require('./units/hovertank.ini.js');

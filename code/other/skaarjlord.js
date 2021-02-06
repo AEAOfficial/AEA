@@ -30,41 +30,42 @@ client.on("message", message => {
 let guild = client.guilds.cache.get('606586202942079017');
 let member = guild.member(message.author);
 let nickname = member ? member.displayName : null;
-let userava = message.author;
+let avatar = message.author.displayAvatarURL();
+let attach = MessageAttachment
    const taco = message.content.split('/suggest').join('')
          var a1 = new Discord.MessageEmbed()
          	.setColor('#1500f7')
-	        .setTitle('New Suggestion!')
-         	.setAuthor(nickname, userava.avatarURL)
+	        .setTitle(`New Suggestion from ${nickname}!`)
+         	.setAuthor('AEA', client.user.displayAvatarURL())
 			.setDescription(taco)
 			.addField('Vote Options:','✅ or ❌')
          	.setURL('')
-	        .setThumbnail('https://cdn.discordapp.com/icons/606586202942079017/7eafb97b0aa80cecb8e4a9f0a7f87c21.webp?size=128')
+			.setImage(attach)
+	        .setThumbnail(avatar)
          	.setTimestamp()
          	.setFooter('Edited by: SkaarjLord', 'https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128');
 
 //https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128
- if(message.author.bot) return; 
+if(message.author.bot) return; 
 
 if(message.content.toLowerCase().startsWith('/suggest')){
 if (message.channel.id === '711753321106636830'){
-
-	var channel = message.member.guild.channels.cache.find(channel => channel.name === "❌-votes-✅")
+	message.delete()
+	var channel = message.member.guild.channels.cache.find(channel => channel.name === "✅-votes-❌")
 	if(!channel){
-
-    	message.reply('The "❌-votes-✅" channel must exist')
+		message.delete()
+    	message.reply('The "✅-votes-❌" channel must exist')
 	}
 	
 	
 	else {
-		message.delete()
 		message = channel.send(a1).then(embedMessage => {
-			var react1 = embedMessage.react('❌')
 			var react2 = embedMessage.react('✅')
-			if (!react1)
-			react1.remove()
+			var react1 = embedMessage.react('❌')
 			if (!react2)
 			react2.remove()
+			if (!react1)
+			react1.remove()
 		});
 
 		
@@ -72,9 +73,8 @@ if (message.channel.id === '711753321106636830'){
 
 
 	} else {
-
-
-	message.reply('This is not the suggestions channel!')
+		message.delete()
+		message.reply('This is not the suggestions channel!')
 	
 	}
 	
