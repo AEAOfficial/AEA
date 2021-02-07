@@ -16,10 +16,6 @@ process.code();
 // Run locally, replace process.env.BOT_TOKEN
 client.login(BOT_TOKEN);
 
-client.once('ready', () => {
-	console.log('Ready!');
-});
-
 client.on('ready', () => {
     client.user.setStatus('available')
     client.user.setPresence({
@@ -28,19 +24,12 @@ client.on('ready', () => {
 	    type: "Listening"
         }
     });
+	console.log('Ready!');
 });
 
 client.on('guildMemberAdd', member => {
-	let role = message.guild.roles.find(r => r.name === 'Member');
-    const channel = member.guild.channels.find(ch => ch.name === '》general');
-    if (!channel) return;
-    channel.send(`Welcome to AEA, ${member}!`);
-
-    member = message.mentions.members.first();
-	member.addRole(role);
+	member.guild.channels.get('606586202942079023').send(`Welcome to AEA, ${member}!`)
 });
-
-const talkedRecently = new Set();
 
 const clist = new Discord.MessageEmbed()
 	.setColor('#1500f7')
@@ -203,6 +192,10 @@ if(message.content == '/muteall' && message.member.roles.cache.some(role => role
 		message.channel.send(attachment);
     }
 
+
+	if (message.content.toLowerCase() === 'hi' || message.content.toLowerCase() === 'hey'){
+		message.member.roles.add('620321947737260063');
+	}
 
 
 

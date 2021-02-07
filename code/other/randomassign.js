@@ -84,19 +84,7 @@ client.on('messageReactionAdd', (messageReaction, user) => {
             user.send(`You have signed up, ${member}!`)
         }
 
-        var x = getRandomInt(1, 6);
-        if (x === 1 || x === 2){
-            member.roles.add('806327965675028520')
-            user.send(`You are Team 1!`)
-        }
-        if (x === 3 || x === 4){
-            member.roles.add('806328041080750120')
-            user.send(`You are Team 2!`)
-        }
-        if (x === 5 || x === 6) {
-            member.roles.add('806328050656083998')
-            user.send(`You are Team 3!`)
-        }
+        member.roles.add('807761734483050528')
 
     }
 })
@@ -109,9 +97,7 @@ client.on('messageReactionRemove', (messageReaction, user) => {
     if (react1){
         const { guild } = messageReaction.message
         const member = guild.members.cache.find(member => member.id === user.id);
-        member.roles.remove('806327965675028520')
-        member.roles.remove('806328041080750120')
-        member.roles.remove('806328050656083998')
+        member.roles.remove('807761734483050528')
         const channel = guild.channels.cache.find(channel => channel.name === '》sign-logs')
         if (!channel){
             const channel = guild.channels.cache.find(channel => channel.name === 'bot-errors')
