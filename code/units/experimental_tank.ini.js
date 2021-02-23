@@ -3,11 +3,7 @@ exports.code = function(){
             if (message.content.toLowerCase() === 'experimentalsamtank') { 
               if(message.author.bot) return; 
               message.channel.send(experimentalSamTank); 
-                  }
-            if (message.content.toLowerCase() === 'experimentaltank') { 
-              if(message.author.bot) return; 
-              message.channel.send(experimentalTank); 
-	        }
+	          }
 	  });
 const experimentalSamTank = new Discord.MessageEmbed() 
    .setColor('#1500f7') 
@@ -29,7 +25,14 @@ const experimentalSamTank = new Discord.MessageEmbed()
    .addField('Turn Speed:  0.7','__________________')
    .setTimestamp() 
    .setFooter('SkaarjLord', 'https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128'); 
-   
+}
+exports.code = function(){ 
+    client.on('message', message => {
+            if (message.content.toLowerCase() === 'experimentaltank') { 
+              if(message.author.bot) return; 
+              message.channel.send(experimentalTank); 
+	          }
+	  });
 const experimentalTank = new Discord.MessageEmbed() 
    .setColor('#1500f7') 
    .setAuthor('Lemons#5444', 'https://imgur.com/6NICs3U.png') 

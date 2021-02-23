@@ -1,6 +1,6 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'titanmech') { 
+            if (message.content.toLowerCase() === 'ektitanmech') { 
               if(message.author.bot) return; 
               message.channel.send(EkTitanMech); 
 	          }

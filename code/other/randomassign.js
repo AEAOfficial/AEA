@@ -66,7 +66,7 @@ function getRandomInt(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
 }
-
+/*
 client.on('messageReactionAdd', (messageReaction, user) => {
     if (user.id === '587367764474462210' || messageReaction.bot) return;
     const react1 = messageReaction.emoji.name === '✅'
@@ -109,7 +109,7 @@ client.on('messageReactionRemove', (messageReaction, user) => {
         }
     }
 }); 
-  
+*/
 
 
 //________________Dont touch Zone start

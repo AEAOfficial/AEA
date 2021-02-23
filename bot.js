@@ -28,7 +28,24 @@ client.on('ready', () => {
 });
 
 client.on('guildMemberAdd', member => {
-	member.guild.channels.get('606586202942079023').send(`Welcome to AEA, ${member}!`)
+	const channel = member.guild.channels.cache.find(channel => channel.name === '》general')
+	channel.send(`Welcome to the Official AEA Mod Pack discord server ${member}! \nCheck the archives section for all AEA downloads, and #》find-players when you’re ready to play! \nPlease check your dms for rules and more details!`);
+	member.send(`\n										Rules\n
+	1. No excessive toxic behavior. This server is comprised of both competitive players and casual players. Coexistence isn't much to ask.\n
+	2. Do not beg or complain for features to be changed, added, or removed.\n
+	3. Do not spam ping roles, or other members.\n
+	4. ONLY ping the AEA elites if you have at least 2 players already, and an available host.\n
+	5. ONLY ping the @Hosts role if you have at least 2 players already gathered.\n
+	6. Do not sabotage or cheat anyone in a game, such actions will get you banned or punished.\n
+	7. Be respectful. Especially to the @Dev Team Alpha. We work for free, and make content for you to enjoy. Don't take us for granted, and just be a decent human being.\n
+												Server Info & Tips\n
+	1. The @AEA Elites role is for players who wished to be pinged when games are actively being set up. Anyone may acquire this role in #》auto-roles channel.\n
+	2. Find players in #》find-players.\n
+	3. If you want to further you knowledge in AEA Strategy check the #》aea-guide.\n
+	4. If you want to download AEA Main or AEA Beta, you can do so in #》mod-main-download, or #》mod-beta-download.\n
+	5. Type /list in the _bot_ channel for a list of bot commands!\n
+	6. Any all further questions can go to horseman#0810\n`)
+	member.roles.add('620321947737260063');
 });
 
 const clist = new Discord.MessageEmbed()

@@ -21,7 +21,7 @@ const kirov = new Discord.MessageEmbed()
    .addField('Area Damage:  300','__________________')
    .addField('Direct Damage:  1','__________________')
    .addField('Area Damage:  40','__________________')
-   .addField('Move Speed:  0.5','__________________')
+   .addField('Move Speed:  0.6','__________________')
    .addField('Turn Speed:  0.75','__________________')
    .setTimestamp() 
    .setFooter('SkaarjLord', 'https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128'); 
