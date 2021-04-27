@@ -172,8 +172,7 @@ if(fivevfive && Client){
   loader19.code()
   var loader20 = require('./units/achilles.ini.js');
   loader20.code()
-  var loader21 = require('./units/behemoth_tank.ini.js');
-  loader21.code()
+
   var loader22 = require('./units/buffalo.ini.js');
   loader22.code()
   var loader23 = require('./units/comet.ini.js');
