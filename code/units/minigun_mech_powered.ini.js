@@ -21,7 +21,7 @@ const minigunMechPowered = new Discord.MessageEmbed()
    .addField('Range:  140','__________________')
    .addField('Direct Damage:  60','__________________')
    .addField('Area Damage:  60','__________________')
-   .addField('Move Speed:  0.3','__________________')
+   .addField('Move Speed:  0.5','__________________')
    .addField('Turn Speed:  5.0','__________________')
    .setTimestamp() 
    .setFooter('SkaarjLord', 'https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128'); 

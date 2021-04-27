@@ -1,16 +1,16 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'stelsship2') { 
+            if (message.content.toLowerCase() === 'phantomscout2') { 
               if(message.author.bot) return; 
-              message.channel.send(stelsShip2); 
+              message.channel.send(phantomScout2); 
 	          }
 	  });
-const stelsShip2 = new Discord.MessageEmbed() 
+const phantomScout2 = new Discord.MessageEmbed() 
    .setColor('#1500f7') 
    .setAuthor('Lemons#5444', 'https://imgur.com/6NICs3U.png') 
    .setThumbnail('https://cdn.discordapp.com/icons/606586202942079017/7eafb97b0aa80cecb8e4a9f0a7f87c21.webp?size=128')
-   //.attachFiles(['./resources/stelsShip2.png']) 
-   //.setImage('attachment://stelsShip2.png') 
+   //.attachFiles(['./resources/phantomScout2.png']) 
+   //.setImage('attachment://phantomScout2.png') 
    .setTitle(' Phantom Scout') 
    .setDescription(' - Stealthy scouting drone\n- Cannot attack\n- Can turn invisible for 5 seconds') 
    .addField('Stats','__________________') 
