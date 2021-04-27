@@ -20,8 +20,8 @@ const warShip = new Discord.MessageEmbed()
    .addField('Direct Damage:  50','__________________')
    .addField('Area Damage:  40','__________________')
    .addField('Direct Damage:  95','__________________')
-   .addField('Move Speed:  0.7','__________________')
-   .addField('Turn Speed:  1.0','__________________')
+   .addField('Move Speed:  0.6','__________________')
+   .addField('Turn Speed:  0.7','__________________')
    .setTimestamp() 
    .setFooter('SkaarjLord', 'https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128'); 
 }

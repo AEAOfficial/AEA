@@ -18,7 +18,7 @@ const scout = new Discord.MessageEmbed()
    .addField('Health:  350','__________________')
    .addField('Range:  110','__________________')
    .addField('Direct Damage:  15','__________________')
-   .addField('Move Speed:  1.3','__________________')
+   .addField('Move Speed:  1.4','__________________')
    .addField('Turn Speed:  2.4','__________________')
    .setTimestamp() 
    .setFooter('SkaarjLord', 'https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128'); 

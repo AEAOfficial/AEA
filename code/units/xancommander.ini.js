@@ -1,18 +1,18 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'cyborg') { 
+            if (message.content.toLowerCase() === 'xan') { 
               if(message.author.bot) return; 
-              message.channel.send(cyborg); 
+              message.channel.send(xan); 
 	          }
 	  });
-const cyborg = new Discord.MessageEmbed() 
+const xan = new Discord.MessageEmbed() 
    .setColor('#1500f7') 
    .setAuthor('Lemons#5444', 'https://imgur.com/6NICs3U.png') 
    .setThumbnail('https://cdn.discordapp.com/icons/606586202942079017/7eafb97b0aa80cecb8e4a9f0a7f87c21.webp?size=128')
-   //.attachFiles(['./resources/cyborg.png']) 
-   //.setImage('attachment://cyborg.png') 
+   //.attachFiles(['./resources/xan.png']) 
+   //.setImage('attachment://xan.png') 
    .setTitle(' Xan Commander') 
-   .setDescription('- Advanced Next Gen super unit\n- Fast, agile, lightly armoured\n- Extremely powerful plasma minigun melts its enemies quickly\n- Long range ground & air attack\n- Cannot be repaired\n- Cannot fit in transports\n- Has self regen abilities\n- Can only have 1 built at a time') 
+   .setDescription('- Advanced Next Gen super unit\n- Fast, agile, lightly armoured\n- Has a Jetpack that consumes battery with extended usage\n- Cannot attack while flying\n- Extremely powerful plasma minigun melts its enemies quickly\n- Long range ground & air attack\n- Cannot be repaired\n- Cannot fit in transports\n- Has self regen abilities\n- Can only have 1 built at a time\n- Long term usage leads to malfunction') 
    .addField('Stats','__________________') 
    .addField('Price:  21000, uranium=1000','__________________')
    .addField('Health:  1200','__________________')
