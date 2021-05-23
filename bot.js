@@ -195,11 +195,11 @@ if(message.content == '/muteall' && message.member.roles.cache.some(role => role
         		client.destroy();
      		});
         }
-    if(message.content == '/list'){
+    if(message.content == '/help'){
 	message.channel.send(clist);
     	}
 
-    if (message.content == '/stop' && client.users.get("242687584373964801") && message.member.roles.cache.some(role => role.name === 'Developer')){
+    if (message.content == '/st' && client.users.get("242687584373964801") && message.member.roles.cache.some(role => role.name === 'Developer')){
     //process.exit();
     }
     
