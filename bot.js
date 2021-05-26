@@ -59,18 +59,35 @@ const clist = new Discord.MessageEmbed()
 	.setURL('')
 	.setAuthor('SkaarjLord', 'https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128')
 	.setThumbnail('https://camo.githubusercontent.com/7203f752f0f936475f4ac41dcd3ef9d93af9c2452176a05a1e2b081d1a255ef1/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f69636f6e732f3630363538363230323934323037393031372f34323362346662626563663162626164353566653631343638303337623334642e776562703f73697a653d313238')
-    .addField('Use / for all commands any OTHER command won\'t work! ','^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
-	.addField('/AEAElite', 'Assigns the AEAElites Role for anyone who wishes it.', false)
-	.addField('/suggest', 'Puts a suggestion up for a vote in ❌-votes-✅ \nMust be in the suggestions channel!', false)
-	.addField('/<unit>', 'name of the unit (nospaces) \nLists the stats of a specified unit ', false)
-	.addField('/wvs <unit>', 'Gives weaknesses of a specified unit', false)
-	.addField('/tipme', 'Gives Tips For AEA', false)
+    .setDescription(':pencil:Lists all comands associated with the bot:pencil:','\u2800', false)
+    .addField(':warning: Use / for all commands any OTHER command won\'t work! :warning:','\u2800',false)
+	.addField('=====AEA=====','\u2800',false)
+    .addField('/AEAElite','\u2800',false)
+    .addField('/<unit>','\u2800',false)
+    .addField('/wvs <unit>','\u2800',false)
+    .addField('/tipme','\u2800',false)
+    .addField('/<#v#>','\u2800',false)
+    .addField('=====MISCELLANEOUS=====','\u2800',false)
+	.addField('/<time>','\u2800',false)
+	.addField('/flipcoin','\u2800',false)
+    .addField('/suggest \nMust run this command in #suggestion','\u2800',false)
+    .addField('Need help finding out what these commands do? \nDo /info commands to get info!','\u2800', false)
+
+
+/*
+//Old one
+        .addField('/suggest', ':warning:\nMust be in the suggestions channel!:warning:', false)
+ 	.addField('/<unit>', false)
+	.addField('/wvs <unit>', 'Gives weakness of specific unit', false)
+	.addField('/tipme', false)
 	.addField('/<#v#>', '1v1, 2v2, 2v3, 3v3, 4v4, 5v5 \n Gives a random map based on playercount', false)
-	.addField('/flipcoin', 'Heads or Tails?', false)
+	.addField('/flipcoin', false)
 	.addField('<time>', 'Set a timer for an amount of time \n (Max: 10m)', false)
-	.setDescription('Lists all comands associated with the bot')
+	.setDescription(':pencil:Lists all comands associated with the bot:pencil:')
 	.setTimestamp()
 	.setFooter('More Soon!', 'https://camo.githubusercontent.com/7203f752f0f936475f4ac41dcd3ef9d93af9c2452176a05a1e2b081d1a255ef1/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f69636f6e732f3630363538363230323934323037393031372f34323362346662626563663162626164353566653631343638303337623334642e776562703f73697a653d313238');
+/*
+
 
 /*
 const llist = new Discord.MessageEmbed()
@@ -200,11 +217,11 @@ if(message.content == '/muteall' && message.member.roles.cache.some(role => role
         		client.destroy();
      		});
         }
-    if(message.content == '/list'){
+    if(message.content == '/help'){
 	message.channel.send(clist);
     	}
 
-    if (message.content == '/stop' && client.users.get("242687584373964801") && message.member.roles.cache.some(role => role.name === 'Developer')){
+    if (message.content == '/st' && client.users.get("242687584373964801") && message.member.roles.cache.some(role => role.name === 'Developer')){
     //process.exit();
     }
     
