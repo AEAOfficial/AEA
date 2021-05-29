@@ -22,7 +22,7 @@ console.log('Units Loaded')
 
 
 // Random
-//const kd = require('./other/kd.js');
+const kd = require('./other/kd.js');
 const N = require('./other/Nword.js');
 const weak = require('./other/weakness.js');
 const teams = require('./other/teams.js');
@@ -84,12 +84,12 @@ if(fivevfive && Client){
     flip.code();
     console.log('Flipcoin loaded');
   }
-/*
+
   if(kd && Client){
     kd.code();
-    console.log('Kill/death loaded');
+    console.log('Ranks loaded');
   } 
-*/
+
   if(Timer && Client){
    		 Timer.code();
     		console.log('Timer loaded');
