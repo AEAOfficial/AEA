@@ -1,7 +1,6 @@
 const { Message } = require('discord.js')
 
 exports.code = function(){
-  const Keyv = require('keyv')
   const fs = require('fs')
   const talkedRecently = new Set();
   client.on('message', (message, user) => {
