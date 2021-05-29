@@ -1,75 +1,39 @@
-const { WSAEISCONN } = require('constants');
+const { Message } = require('discord.js')
 
 exports.code = function(){
-    const { Client, Attachment } = require('discord.js');
-    const fs = require("fs");
-    const Enmap = require("enmap");
-    let db = require("./nwords.json");
-    client.setMaxListeners(0)
+  const Keyv = require('keyv')
+  const fs = require('fs')
+  const talkedRecently = new Set();
+  client.on('message', (message, user) => {
+    const rank = '✪'
+    const username = message.author.id
+    if (message.content) {
+      fs.appendFileSync(__dirname + `/db/${username}.txt`,`${rank}`)
+    }
+    if (talkedRecently.has(message.author.id)) {
+            if (message.author.client) return;
+            message.reply("Wait 1 minute before getting typing this command again. - " + message.author);
+    } else {
 
-    client.points = new Enmap({name: "wlr"});
-
-
-    
-    client.on('message', (message, user) => {
-        if (message.author.bot) return;
-        if (message.guild) {
-          // Let's simplify the `key` part of this.
-          const key = `${message.guild.id}-${message.author.id}`;
-          client.points.ensure(key, {
-            user: message.author.id,
-            guild: message.guild.id,
-            wins: 0,
-            loses: 0
-          });
-          client.points.inc(key, "wlr");
-        }
-        // Rest of message handler
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        let member = guild.member(message.author);
-        let nickname = member ? member.displayName : null;
-        let userava = message.author;
-          
-            const wlr = new Discord.MessageEmbed()
-                .setColor('#1500f7')
-                .setTitle('Win to Lose Ratio')
-                .setURL('')
-                //.attachFiles(['./resources/assaultmech.png'])
-                .setAuthor(nickname, userava.avatarURL)
-                .setDescription("Shows the number of games won compared to lost")
-                
-                .addField("Wins", `${win}`)
-                .addField("Lost", `${lose}`)
-                .setThumbnail('https://cdn.discordapp.com/icons/606586202942079017/7eafb97b0aa80cecb8e4a9f0a7f87c21.webp?size=128')
-                //.setImage('attachment://assaultmech.png')
-                .setTimestamp()
-                .setFooter('Edited by: SkaarjLord', 'https://cdn.discordapp.com/avatars/287608141191970817/6d82a2d09c9b2323f453abf5bfaaa588.png?size=128');
-       
-        if(message.content.toLowerCaser() === '/wlr'){
-            
-            message.send(wlr)
-            
-        }
+        if (message.content.toLowerCase() === '/rank'){
         
-    });
+          let file = fs.readFile(__dirname + `/db/${username}.txt`, function (err, data) {
+            if (err) return console.log(err);
+            console.log('User Read');
+            message.channel.send(`Your Rank: ${data}`)
+          });
+          
+        }
+        // Adds the user to the set so that they can't talk for a minute
+        talkedRecently.add(message.author.id);
+        setTimeout(() => {
+          // Removes the user from the set after a minute
+          talkedRecently.delete(message.author.id);
+        }, 60000);
+    }
 
+
+
+
+  });
 }
