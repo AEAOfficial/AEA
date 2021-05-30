@@ -23,17 +23,6 @@ exports.code = function(){
           message.channel.send(`${username}'s Rank: ${stats.size}`)
           }
       });
-      let mention = message.mentions.user.last()
-      if (mention){
-        let file = fs.stat(__dirname + `/db/${mention.username}'s.txt`, (err, stats) => {
-          console.log('User Read');
-          if (stats == undefined) {
-            message.channel.send(`${mention.username}'s Rank: Unranked`)
-          } else {
-          message.channel.send(`${mention.username}'s Rank: ${stats.size}`)
-          }
-        });  
-      }
     }
   });
 }
