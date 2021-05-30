@@ -10,13 +10,18 @@ client.login(BOT_TOKEN);
 
 
 
-
+const kd = require('./code/other/kd.js');
+  if(kd && Client){
+   		kd.code();
+    	console.log('Loaded Ranks');
+}
 
 const Imports = require('./code/imports.js');
   if(Imports && Client){
    		Imports.code();
     	console.log('Loading imports');
 }
+
 const Loader = require('./code/units/#LOADER.js');
   if(Loader && Client){
     Loader.code();
@@ -70,13 +75,14 @@ const clist = new Discord.MessageEmbed()
     .addField(':warning: Use / for all commands any OTHER command won\'t work! :warning:','\u2800',false)
 	.addField('=====AEA=====','\u2800',false)
     .addField('/AEAElite','\u2800',false)
-    .addField('/<unit>','\u2800',false)
-    .addField('/wvs <unit>','\u2800',false)
+    .addField('/unit','\u2800',false)
     .addField('/tipme','\u2800',false)
-    .addField('/<#v#>','\u2800',false)
+    .addField('/#v#','\u2800',false)
     .addField('=====MISCELLANEOUS=====','\u2800',false)
-	.addField('/<time>','\u2800',false)
+	.addField('/time','\u2800',false)
 	.addField('/flipcoin','\u2800',false)
+	.addField('/rank','\u2800',false)
+	.addField('/wvs unit','\u2800',false)
     .addField('/suggest \nMust run this command in #suggestion','\u2800',false)
     .addField('Need help finding out what these commands do? \nDo /info commands to get info!','\u2800', false)
 
