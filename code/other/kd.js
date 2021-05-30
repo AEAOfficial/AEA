@@ -23,8 +23,7 @@ exports.code = function(){
           message.channel.send(`${username}'s Rank: ${stats.size}`)
           }
       });
-      let mention = message.mentions.user.last()
-      if (mention){
+      if (message.mentions.members.first()){
         let file = fs.stat(__dirname + `/db/${mention.username}'s.txt`, (err, stats) => {
           console.log('User Read');
           if (stats == undefined) {

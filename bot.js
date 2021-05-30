@@ -5,7 +5,7 @@ client.setMaxListeners(0)
 
 var process = require('./process.env')
 process.code();
-client.login(BOT_TOKEN);
+client.login(BOT_BETA);
 
 
 
@@ -15,7 +15,7 @@ const kd = require('./code/other/kd.js');
    		kd.code();
     	console.log('Loaded Ranks');
 }
-
+/*
 const Imports = require('./code/imports.js');
   if(Imports && Client){
    		Imports.code();
@@ -29,7 +29,7 @@ const Loader = require('./code/units/#LOADER.js');
     console.log('Loader Initialized...')
 }
 
-
+*/
 
 
 
@@ -43,7 +43,7 @@ client.on('ready', () => {
     });
 	console.log('Ready!');
 });
-
+/*
 client.on('guildMemberAdd', member => {
 	const channel = member.guild.channels.cache.find(channel => channel.name === '》general')
 	channel.send(`Welcome to the Official AEA Mod Pack discord server ${member}! \nCheck the archives section for all AEA downloads, and #》find-players when you’re ready to play! \nPlease check your dms for rules and more details!`);
@@ -86,7 +86,7 @@ const clist = new Discord.MessageEmbed()
     .addField('/suggest \nMust run this command in #suggestion','\u2800',false)
     .addField('Need help finding out what these commands do? \nDo /info commands to get info!','\u2800', false)
 
-
+*/
 
 
 client.on('message', (message, user) => {
