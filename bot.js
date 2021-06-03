@@ -46,7 +46,7 @@ client.on('ready', () => {
 
 client.on('guildMemberAdd', member => {
 	const channel = member.guild.channels.cache.find(channel => channel.name === '》general')
-	channel.send(`Welcome to the Official AEA Mod Pack discord server ${member}! \nCheck the archives section for all AEA downloads, and #》find-players when you’re ready to play! \nPlease check your dms for rules and more details!`);
+	channel.send(`Welcome to the Official AEA Mod Pack discord server ${member}! \nCheck the #》mod-main-download #》mod-aea-special #》mod-beta-download #》aea-expansions for all AEA downloads! \nPlease check your dms for rules and more details!`);
 	member.send(`\n										Rules\n
 	1. No excessive toxic behavior. This server is comprised of both competitive players and casual players. Coexistence isn't much to ask.\n
 	2. Do not beg or complain for features to be changed, added, or removed.\n
@@ -55,13 +55,16 @@ client.on('guildMemberAdd', member => {
 	5. ONLY ping the @Hosts role if you have at least 2 players already gathered.\n
 	6. Do not sabotage or cheat anyone in a game, such actions will get you banned or punished.\n
 	7. Be respectful. Especially to the @Dev Team Alpha. We work for free, and make content for you to enjoy. Don't take us for granted, and just be a decent human being.\n
+	8. If you are 18+ then pick the 18+ role in auto roles, if you are not 18 then don't use the 18+ role, we will not be held responsible for things you see there.\n
 												Server Info & Tips\n
-	1. The @AEA Elites role is for players who wished to be pinged when games are actively being set up. Anyone may acquire this role in #》auto-roles channel.\n
+	1. The @AEA Elites and @Hosts role is for players who wished to be pinged when games are actively being set up. Anyone may acquire this role in #》auto-roles channel.\n
 	2. Find players in #》find-players.\n
 	3. If you want to further you knowledge in AEA Strategy check the #》aea-guide.\n
 	4. If you want to download AEA Main or AEA Beta, you can do so in #》mod-main-download, or #》mod-beta-download.\n
-	5. Type /list in the _bot_ channel for a list of bot commands!\n
-	6. Any all further questions can go to horseman#0810\n`)
+	5. Type /help in the _bot_ channel for a list of bot commands!\n
+	6. Pick and Assign Roles in auto roles.
+	7. If you are looking for more _ahem_ variety in your gameplay experience, take a look at AEA Special Pack. 
+	8. Any all further questions can go to Lemons#5444\n`)
 	member.roles.add('620321947737260063');
 });
 
