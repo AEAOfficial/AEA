@@ -8,6 +8,7 @@ exports.code = function(){
     const filter = m => m.content;
     const collector = message.channel.createMessageCollector(filter);
     if(message.content){
+      if(message.author.username === 'Vox777' || message.author.id === '242687584373964801') return;
         fs.appendFileSync(__dirname + `/db/${username}'s.txt`,`✪`);
     }
           
