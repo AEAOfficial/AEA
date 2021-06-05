@@ -7,7 +7,8 @@ exports.code = function(){
         const Timer = setTimeout(timeup, durations[durationType]);
     }
     function timeup() {
-        message.reply('Times Up!')
+        target.roles.add(role)
+        target.roles.remove(muterole)
         clearTimeout(Timer, 250);
     }
 
