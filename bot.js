@@ -38,7 +38,7 @@ client.on('ready', () => {
     client.user.setPresence({
         game: {
             name: 'AEA, Type /help',
-	    type: "Listening"
+	    type: "Watching"
         }
     });
 	console.log('Ready!');
@@ -94,72 +94,6 @@ const clist = new Discord.MessageEmbed()
 
 client.on('message', (message, user) => {
 
-var command = '/purge';
-if(message.content.startsWith(command)){
-
-
-
-
-	if (!message.member.permissions.has("MANAGE_MESSAGES")) {
-		message.reply('You do not have permission to do that');
-		return;
-	}
-	const args = message.content.split(' ').slice(1);
-	const amount = args.join(' ');
-	if(!amount) {
-		message.reply('Put a number dumbass')
-	}
-	if (amount > 100) return message.reply('You can`t delete more than 100 messages at once!'); 
-	if (amount < 1) return message.reply('You have to delete at least 1 message!'); 
-	message.channel.bulkDelete(amount)
-	message.reply(`Deleted messages!`); 	
-	
-
-
-} 
-	
-
-
-
-//if(message.content == "/give" && client.users.get("242687584373964801") ){
-//	message.guild.fetchMember('242687584373964801').then(member => {
-//		member.addRole('692034330108887123');	
-//	});
-//}
-
-/*
-    //const role = client.guild.find(role => role.name === 'Member');
-    //If anything
-    let role = message.guild.roles.find(r => r.name === "Member");
-    if(message.content){
-	    if(message.author.bot) return;  
-         message.guild.fetchMember(message.author).then(member => {
-           message.guild.member.roles.add('620321947737260063');	
-           
-          });
-		     
-    }
-
-*/
-
-
-
-
-if(message.content == '/muteall' && message.member.roles.cache.some(role => role.name === 'Developer')){
-        let channel = message.member.voiceChannel;
-        for (let member of channel.members) {
-            member[1].setMute(true)
-           
-        }
-    }
-
-    if(message.content == '/unmuteall' && message.member.roles.cache.some(role => role.name === 'Developer')){
-        let channel = message.member.voiceChannel;
-        for (let member of channel.members) {
-                member[1].setMute(false)
-               
-        }
-    }
 
     if(message.content == '/help'){
 	message.channel.send(clist);
