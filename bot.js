@@ -38,7 +38,7 @@ client.on('ready', () => {
     client.user.setPresence({
         game: {
             name: 'AEA, Type /help',
-	    type: "Watching"
+	    type: "Listening"
         }
     });
 	console.log('Ready!');
@@ -46,7 +46,7 @@ client.on('ready', () => {
 
 client.on('guildMemberAdd', member => {
 	const channel = member.guild.channels.cache.find(channel => channel.name === '》general')
-	channel.send(`Welcome to the Official AEA Mod Pack discord server ${member}! \nCheck the #》mod-main-download #》mod-aea-special #》mod-beta-download #》aea-expansions for all AEA downloads! \nPlease check your dms for rules and more details!`);
+	channel.send(`Welcome to the Official AEA Mod Pack discord server ${member}! \nCheck the archives section for all AEA downloads, and #》find-players when you’re ready to play! \nPlease check your dms for rules and more details!`);
 	member.send(`\n										Rules\n
 	1. No excessive toxic behavior. This server is comprised of both competitive players and casual players. Coexistence isn't much to ask.\n
 	2. Do not beg or complain for features to be changed, added, or removed.\n
@@ -55,16 +55,13 @@ client.on('guildMemberAdd', member => {
 	5. ONLY ping the @Hosts role if you have at least 2 players already gathered.\n
 	6. Do not sabotage or cheat anyone in a game, such actions will get you banned or punished.\n
 	7. Be respectful. Especially to the @Dev Team Alpha. We work for free, and make content for you to enjoy. Don't take us for granted, and just be a decent human being.\n
-	8. If you are 18+ then pick the 18+ role in auto roles, if you are not 18 then don't use the 18+ role, we will not be held responsible for things you see there.\n
 												Server Info & Tips\n
-	1. The @AEA Elites and @Hosts role is for players who wished to be pinged when games are actively being set up. Anyone may acquire this role in #》auto-roles channel.\n
+	1. The @AEA Elites role is for players who wished to be pinged when games are actively being set up. Anyone may acquire this role in #》auto-roles channel.\n
 	2. Find players in #》find-players.\n
 	3. If you want to further you knowledge in AEA Strategy check the #》aea-guide.\n
 	4. If you want to download AEA Main or AEA Beta, you can do so in #》mod-main-download, or #》mod-beta-download.\n
-	5. Type /help in the _bot_ channel for a list of bot commands!\n
-	6. Pick and Assign Roles in auto roles.
-	7. If you are looking for more _ahem_ variety in your gameplay experience, take a look at AEA Special Pack. 
-	8. Any all further questions can go to Lemons#5444\n`)
+	5. Type /list in the _bot_ channel for a list of bot commands!\n
+	6. Any all further questions can go to horseman#0810\n`)
 	member.roles.add('620321947737260063');
 });
 
@@ -94,6 +91,72 @@ const clist = new Discord.MessageEmbed()
 
 client.on('message', (message, user) => {
 
+var command = '/purge';
+if(message.content.startsWith(command)){
+
+
+
+
+	if (!message.member.permissions.has("MANAGE_MESSAGES")) {
+		message.reply('You do not have permission to do that');
+		return;
+	}
+	const args = message.content.split(' ').slice(1);
+	const amount = args.join(' ');
+	if(!amount) {
+		message.reply('Put a number dumbass')
+	}
+	if (amount > 100) return message.reply('You can`t delete more than 100 messages at once!'); 
+	if (amount < 1) return message.reply('You have to delete at least 1 message!'); 
+	message.channel.bulkDelete(amount)
+	message.reply(`Deleted messages!`); 	
+	
+
+
+} 
+	
+
+
+
+//if(message.content == "/give" && client.users.get("242687584373964801") ){
+//	message.guild.fetchMember('242687584373964801').then(member => {
+//		member.addRole('692034330108887123');	
+//	});
+//}
+
+/*
+    //const role = client.guild.find(role => role.name === 'Member');
+    //If anything
+    let role = message.guild.roles.find(r => r.name === "Member");
+    if(message.content){
+	    if(message.author.bot) return;  
+         message.guild.fetchMember(message.author).then(member => {
+           message.guild.member.roles.add('620321947737260063');	
+           
+          });
+		     
+    }
+
+*/
+
+
+
+
+if(message.content == '/muteall' && message.member.roles.cache.some(role => role.name === 'Developer')){
+        let channel = message.member.voiceChannel;
+        for (let member of channel.members) {
+            member[1].setMute(true)
+           
+        }
+    }
+
+    if(message.content == '/unmuteall' && message.member.roles.cache.some(role => role.name === 'Developer')){
+        let channel = message.member.voiceChannel;
+        for (let member of channel.members) {
+                member[1].setMute(false)
+               
+        }
+    }
 
     if(message.content == '/help'){
 	message.channel.send(clist);
