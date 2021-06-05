@@ -7,10 +7,6 @@ exports.code = function(){
     const username = message.author.username
     const filter = m => m.content;
     const collector = message.channel.createMessageCollector(filter);
-    if(message.content){
-      if(message.author.username === 'Vox777' || message.author.id === '242687584373964801') return;
-        fs.appendFileSync(__dirname + `/db/${username}'s.txt`,`✪`);
-    }
     if (message.content.toLowerCase() === '/rank'){
       if(message.author.id === '242687584373964801'){
         message.channel.send(`Lemons's Rank: ♾`)
@@ -26,6 +22,9 @@ exports.code = function(){
           message.channel.send(`${username}'s Rank: ${stats.size}`)
           }
       });
+    }
+	if(message.content){
+        fs.appendFileSync(__dirname + `/db/${username}'s.txt`,`✪`);
     }
   });
 }
