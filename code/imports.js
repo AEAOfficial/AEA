@@ -13,7 +13,7 @@ client.setMaxListeners(0)
   const Func = require('./other/skaarjlord.js');
   const flip = require('./other/flipcoin.js');
   const test = require('./other/randomassign.js');
-
+  const mute = require('./other/mute.js')
 
   // Maps
 
@@ -50,7 +50,11 @@ client.setMaxListeners(0)
   } 
 
   // Random
-
+  if(mute && Client){
+    mute.code()
+    console.log('Mute command loaded')
+  }
+  
   if(N && Client){
     N.code();
     console.log('Nword loaded');
