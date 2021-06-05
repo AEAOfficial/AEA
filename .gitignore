@@ -1,6 +1,5 @@
 # Config files
 /node_modules
-config.json
 *process.env
 resources/music/config.txt
 resources/music/serversettings.json
