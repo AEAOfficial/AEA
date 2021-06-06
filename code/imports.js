@@ -23,7 +23,7 @@ client.setMaxListeners(0)
   const threevthree = require('./maps/3v3.js');
   const fourvfour = require('./maps/4v4.js');
   const fivevfive = require('./maps/5v5.js');
-
+  const ffa = require('./maps/FFA.js');
   if(onevone && Client){
     onevone.code();
     console.log('1v1s loaded');
@@ -48,7 +48,10 @@ client.setMaxListeners(0)
     fivevfive.code();
     console.log('5v5s loaded');
   } 
-
+  if(ffa && Client){
+    ffa.code();
+    console.log('FFAs loaded');
+  } 
   // Random
   if(mute && Client){
     mute.code()
