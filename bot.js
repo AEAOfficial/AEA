@@ -78,7 +78,7 @@ const clist = new Discord.MessageEmbed()
     .addField(':warning: Use / for all commands any OTHER command won\'t work! :warning:','\u2800',false)
 	.addField('|------{AEA}------|','\u2800',false)
     .addField('/AEAElite','\u2800',false)
-    .addField('/unit','\u2800',false)
+    .addField('unit','\u2800',false)
     .addField('/tipme','\u2800',false)
     .addField('/#v#','\u2800',false)
     .addField('|------{MISCELLANEOUS}------|','\u2800',false)
@@ -86,10 +86,9 @@ const clist = new Discord.MessageEmbed()
 	.addField('/flipcoin','\u2800',false)
 	.addField('/rank','\u2800',false)
 	.addField('/wvs unit','\u2800',false)
-        .addField('/rank','\u2800',false)
+    .addField('/rank','\u2800',false)
     .addField('/suggest \nMust run this command in #suggestion','\u2800',false)
-
-.setFooter('Need help finding out what these commands do? \nDo /info commands to get info!', false)
+	.setFooter('Need help finding out what these commands do? \nDo /info commands to get info!', false)
 
 
 
