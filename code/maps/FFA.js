@@ -12,8 +12,8 @@ function getRandomInt(min, max) {
     }
 
 	if(message.content.startsWith('/')){
-        if(message.content.endsWith('FFA')) {
-        var x = getRandomInt(1, 3);
+        if(message.content.includes('ffa')) {
+        var x = getRandomInt(1, 11);
         }
     }
 
