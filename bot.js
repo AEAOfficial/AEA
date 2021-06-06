@@ -88,7 +88,8 @@ const clist = new Discord.MessageEmbed()
 	.addField('/wvs unit','\u2800',false)
         .addField('/rank','\u2800',false)
     .addField('/suggest \nMust run this command in #suggestion','\u2800',false)
-    .addField('Need help finding out what these commands do? \nDo /info commands to get info!','\u2800', false)
+
+.setFooter('Need help finding out what these commands do? \nDo /info commands to get info!', false)
 
 
 
