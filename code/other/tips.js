@@ -11,7 +11,7 @@ exports.code = function(){
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min)) + min;
         }
-        if(message.content.toLowerCase() === "/tipme") {
+         command(client, 'tipme', async message => {
             var flip = getRandomInt(1, 41);
             if (flip === 1) {
             message.reply('There’s 5 main aspects to RTS. Those are Speed, resources, map control, intel, and preparation.')
