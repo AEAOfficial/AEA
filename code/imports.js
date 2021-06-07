@@ -12,7 +12,7 @@ client.setMaxListeners(0)
   const Timer = require('./other/timer.js');
   const Func = require('./other/skaarjlord.js');
   const flip = require('./other/flipcoin.js');
-  const test = require('./other/randomassign.js');
+  const test = require('./other/tournaments.js');
   const mute = require('./other/mute.js')
 
   // Maps

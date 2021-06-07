@@ -15,8 +15,7 @@ exports.code = function(){
             var flip = getRandomInt(1, 41);
             if (flip === 1) {
             message.reply('There’s 5 main aspects to RTS. Those are Speed, resources, map control, intel, and preparation.')
-            } 
-        
+            }
             if (flip === 2){
             message.reply('For most maps, resources are spread across the map, so having those mid points gives you a financial advantage.')
             }
