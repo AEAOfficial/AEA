@@ -82,10 +82,6 @@ client.setMaxListeners(0)
     tips.code();
     console.log('Tips loaded');
   }
-  if(test && Client){
-    test.code();
-    console.log('Random Assign loaded');
-  }
 
   if(weak && Client){
     weak.code();
