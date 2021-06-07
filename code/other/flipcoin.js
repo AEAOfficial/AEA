@@ -2,7 +2,7 @@ exports.code = function(){
     const { Client, MessageAttachment } = require('discord.js');
     const fs = require("fs");
     client.setMaxListeners(1000)
-
+    const command = require('./command.js')
 command(client, 'flipcoin', message => {
         function getRandomInt(min, max) {
             min = Math.ceil(min);

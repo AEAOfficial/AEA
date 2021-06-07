@@ -1,7 +1,7 @@
 exports.code = function(){	
     const { Client, Attachment } = require('discord.js');	
     client.setMaxListeners(0)	
-
+    const command = require('./command.js')
     command(client, 'wvs', message => {	
 
             if(message.content.toLowerCase().includes('heavyinterceptor')){	

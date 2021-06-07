@@ -2,8 +2,7 @@
 exports.code = function(){
 const { Client, Attachment } = require('discord.js');
 client.setMaxListeners(0)
-
-
+const command = require('./command.js')
 command(client, 'timer', message => {
 
       if(message.content === '10s'){

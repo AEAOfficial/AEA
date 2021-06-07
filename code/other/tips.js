@@ -1,9 +1,8 @@
 exports.code = function(){
+    const command = require('./command.js')
     const { Client, Attachment } = require('discord.js');
     client.setMaxListeners(0)
-    function catchErr (err, message){
-        client.channels.get("738108973651066890").send("ERROR ```" + err + "```")
-    }
+
 
     command(client, 'tipme', message => {
             function getRandomInt(min, max) {
