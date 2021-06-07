@@ -10,6 +10,7 @@ client.setMaxListeners(0)
   const teams = require('./other/teams.js');
   const tips = require('./other/tips.js');
   const Timer = require('./other/timer.js');
+  const Info_c = require('./other/infocommands.js');
   const Func = require('./other/Votes.js');
   const flip = require('./other/flipcoin.js');
  // const test = require('./other/tournaments.js');
@@ -62,11 +63,16 @@ client.setMaxListeners(0)
     N.code();
     console.log('Nword loaded');
   } 
+
   if(flip && Client){
     flip.code();
     console.log('Flipcoin loaded');
   }
 
+  if(N && Client){
+     Info_c.code();
+    console.log('info_c loaded');
+  } 
 
   if(Timer && Client){
    	Timer.code();
