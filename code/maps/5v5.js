@@ -132,6 +132,12 @@ function getRandomInt(min, max) {
             message.reply('Desert Battle Large');
 
 }
+        if (x===20) {
+        const attachment = new MessageAttachment('./resources/map/p10Cross_Conflict_10p_map.png');
+        message.channel.send(attachment);
+            message.reply('Cross Conflict');
+
+}
 });
 
 }

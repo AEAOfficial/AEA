@@ -95,7 +95,24 @@ if (x===13) {
     message.reply('Satan\'s Mark');
 
 }  
-
+if (x===14) {
+        const attachment = new MessageAttachment('./resources/map/p8Based_Basin_8p_map.png');
+        message.channel.send(attachment);
+        message.reply('Based Basin');
+    
+}  
+if (x===15) {
+        const attachment = new MessageAttachment('./resources/map/[p8]Interlocked Large (8p)_map.png');
+        message.channel.send(attachment);
+        message.reply('Interlocked Large');
+    
+}  
+if (x===16) {
+        const attachment = new MessageAttachment('./resources/map/[p8]Tornado eye (8p) [by hxyy]_map.png');
+        message.channel.send(attachment);
+        message.reply('Tornado Eye');
+    
+}  
 });
 
 }
