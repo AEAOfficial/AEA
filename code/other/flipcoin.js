@@ -3,7 +3,7 @@ exports.code = function(){
     const fs = require("fs");
     client.setMaxListeners(1000)
     const command = require('./command.js')
-command(client, 'flipcoin', message => {
+command(client, 'flipcoin',  async message => {
         function getRandomInt(min, max) {
             min = Math.ceil(min);
             max = Math.floor(max);

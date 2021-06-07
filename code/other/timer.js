@@ -3,7 +3,7 @@ exports.code = function(){
 const { Client, Attachment } = require('discord.js');
 client.setMaxListeners(0)
 const command = require('./command.js')
-command(client, 'timer', message => {
+command(client, 'timer',  async message => {
 
       if(message.content === '10s'){
       var Timer10s = setTimeout(timeup, 10000);

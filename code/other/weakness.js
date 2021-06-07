@@ -2,7 +2,7 @@ exports.code = function(){
     const { Client, Attachment } = require('discord.js');	
     client.setMaxListeners(0)	
     const command = require('./command.js')
-    command(client, 'wvs', message => {	
+    command(client, 'wvs',  async message => {	
 
             if(message.content.toLowerCase().includes('heavyinterceptor')){	
                 message.reply('Heavy interceptors can be countered with units that shoot lightning such as amphibious jets that have damage multipliers against shields')	

@@ -2,8 +2,8 @@ exports.code = function(){
     const { Client, MessageAttachment } = require('discord.js');
     const fs = require("fs");
     client.setMaxListeners(1000)
-    const command = require('./command.js')
-command(client, '2v2', message => {
+    const command = require('../other/command.js')
+command(client, '2v2',  async message => {
     function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
