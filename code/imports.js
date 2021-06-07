@@ -10,7 +10,7 @@ client.setMaxListeners(0)
   const teams = require('./other/teams.js');
   const tips = require('./other/tips.js');
   const Timer = require('./other/timer.js');
-  const Func = require('./other/skaarjlord.js');
+  const Func = require('./other/Votes.js');
   const flip = require('./other/flipcoin.js');
   const test = require('./other/tournaments.js');
   const mute = require('./other/mute.js')

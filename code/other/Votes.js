@@ -28,8 +28,7 @@ client.on("message", message => {
 client.on("message", message => {
 
 let guild = client.guilds.cache.get('606586202942079017');
-let member = guild.member(message.author);
-let nickname = member ? member.displayName : null;
+let nickname = message.author.username;
 let avatar = message.author.displayAvatarURL();
 let attach = MessageAttachment
    const taco = message.content.split('/suggest').join('')
