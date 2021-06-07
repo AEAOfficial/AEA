@@ -4,14 +4,13 @@ exports.code = function(){
     function catchErr (err, message){
         client.channels.get("738108973651066890").send("ERROR ```" + err + "```")
     }
-    client.on('message', message => {
 
-    function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min)) + min;
-        }
-         command(client, 'tipme', async message => {
+    command(client, 'tipme', message => {
+            function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+            }
             var flip = getRandomInt(1, 41);
             if (flip === 1) {
             message.reply('There’s 5 main aspects to RTS. Those are Speed, resources, map control, intel, and preparation.')
@@ -137,9 +136,6 @@ exports.code = function(){
             if (flip === 41){
                 message.reply('Hide your income... if you can.')
             }  
-        }
-
     });
-
 }
     
