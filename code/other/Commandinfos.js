@@ -19,7 +19,9 @@ exports.code = function(){
         .addField ('/AEAElite',false)
         .setDescription('Assigns the AEAElites Role for anyone who wishes it.')
 
-
+            if(message.content == '/infocommands'){
+	message.channel.send(clist);
+      }
    }
 
 //COMMAND INFO
