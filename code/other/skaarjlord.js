@@ -7,7 +7,7 @@ client.setMaxListeners(0)
 
 
 //_____________Dont touch Zone end
-const config = require("../other/prefix.json");
+
 client.on('ready', () => {
       
         
