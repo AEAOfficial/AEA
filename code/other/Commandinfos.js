@@ -34,6 +34,6 @@ exports.code = function(){
 //tipme:gives tips for AEA
 
 //<#v#>:
-1v1, 2v2, 2v3, 3v3, 4v4, 5v5, gives a random map based on playercount
+//1v1, 2v2, 2v3, 3v3, 4v4, 5v5, gives a random map based on playercount
 
 //<time>: Set a timer for an amount of time
