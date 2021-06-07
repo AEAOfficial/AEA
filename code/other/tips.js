@@ -4,7 +4,7 @@ exports.code = function(){
     client.setMaxListeners(0)
 
 
-    command(client, 'tipme', message => {
+    command(client, 'tipme', async message => {
             function getRandomInt(min, max) {
             min = Math.ceil(min);
             max = Math.floor(max);
