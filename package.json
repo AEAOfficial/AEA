@@ -1,23 +1,18 @@
 {
-  "name": "aea",
+  "name": "AEA",
   "version": "1.0.0",
   "description": "![icon](https://cdn.discordapp.com/icons/606586202942079017/423b4fbbecf1bbad55fe61468037b34d.webp?size=128)\r ## Description\r AEA is a [Rusted Warfare](https://store.steampowered.com/app/647960/Rusted_Warfare__RTS/) Mod Pack with intents to\r enhance gameplay by balancing current units, all while adding new ones.\r ## About the Author\r Skaarjlord is a balancer, not a modder. Most of the units used are not taken, but contributed from other authors on\r the steam workshop.",
   "main": "bot.js",
   "dependencies": {
-    "@keyv/sqlite": "^2.0.2",
     "combined-stream": "^1.0.8",
     "delayed-stream": "^1.0.0",
     "directory-tree": "^2.2.5",
     "discord-player": "^3.0.3",
     "discord.js": "^12.5.1",
     "discord.js.old": "^11.6.5",
-    "ffmpeg-static": "^4.2.7",
-    "keyv": "^4.0.3",
     "node": "^15.4.0",
     "node-fetch": "^2.6.1",
     "node.js": "0.0.1-security",
-    "png-js": "^1.0.0",
-    "pngjs": "^6.0.0",
     "prompt-sync": "^4.2.0"
   },
   "scripts": {
