@@ -5,7 +5,7 @@ client.setMaxListeners(0)
 
 //var process = require('./process.env')
 //process.code();
-client.login(BOT_TEST);
+client.login(process.env.BOT_TEST);
 
 
 

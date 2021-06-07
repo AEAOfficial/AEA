@@ -2,8 +2,7 @@ exports.code = function(){
     const { Client, Attachment } = require('discord.js');	
     client.setMaxListeners(0)	
 
-    client.on('message', message => {	
-        if(message.content.toLowerCase().startsWith('/wvs')) {	
+    command(client, 'wvs', message => {	
 
             if(message.content.toLowerCase().includes('heavyinterceptor')){	
                 message.reply('Heavy interceptors can be countered with units that shoot lightning such as amphibious jets that have damage multipliers against shields')	
@@ -132,8 +131,5 @@ exports.code = function(){
             if(message.content.toLowerCase().includes('demotruck')){	
                 message.reply('Demo trucks, T2 turrets and dusters can make the boom go boom inside the boom')		
             }
-            // need more strawberry: yes i should add more!
-        }
     });	
-
 }	
