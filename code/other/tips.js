@@ -5,6 +5,7 @@ exports.code = function(){
 
 
     command(client, 'tipme', async message => {
+        const { member, channel, content, mentions } = message
             function getRandomInt(min, max) {
             min = Math.ceil(min);
             max = Math.floor(max);
