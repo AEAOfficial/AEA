@@ -83,7 +83,7 @@ L2HJ14.code()
 
 
 
-const L2HJ15 = require('./Phantom.ini.js');
+const L2HJ15 = require('./phantom.ini.js');
 L2HJ15.code()
 
 
