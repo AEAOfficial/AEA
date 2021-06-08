@@ -6,8 +6,13 @@ exports.code = function(){
     command(client, 'info',  async message => {
         const { member, channel, content, mentions } = message
         const syntax = '/info <command>'
-        if(message.content.endsWith('aeaelites')) {
+        if(message.content.endsWith().toLowerCase() === 'aeaelites') {
             channel.send('Hands out a free copy of AEAElites!')
+        }else{
+            message.reply(`Please use the valid syntax: ${syntax}`)
+        }
+        if(message.content.endsWith().toLowerCase() === 'flipcoin') {
+            channel.send('Its a virtual coin... that you flip... so... heads or tails?')
         }else{
             message.reply(`Please use the valid syntax: ${syntax}`)
         }
