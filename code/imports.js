@@ -1,3 +1,5 @@
+const { info } = require('console');
+
 exports.code = function(){
 const { Client, Attachment } = require('discord.js');
 const fs = require('fs');
@@ -69,7 +71,7 @@ client.setMaxListeners(0)
     console.log('Flipcoin loaded');
   }
 
-  if(N && Client){
+  if(Info_c && Client){
      Info_c.code();
     console.log('info_c loaded');
   } 
