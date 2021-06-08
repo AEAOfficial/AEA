@@ -8,12 +8,11 @@ exports.code = function(){
         const syntax = '/info <command>'
         if(message.content.toLowerCase().endsWith('aeaelites')) {
             channel.send('Hands out a free copy of AEAElites!')
-        }else{
-            message.reply(`Please use the valid syntax: ${syntax}`)
         }
         if(message.content.toLowerCase().endsWith('flipcoin')) {
             channel.send('Its a virtual coin... that you flip... so... heads or tails?')
-        }else{
+        }
+        else{
             message.reply(`Please use the valid syntax: ${syntax}`)
         }
     })
