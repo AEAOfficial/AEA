@@ -11,7 +11,7 @@ exports.code = function(){
         }else{
             message.reply(`Please use the valid syntax: ${syntax}`)
         }
-        if(message.content.endsWith().toLowerCase() === 'flipcoin') {
+        if(message.content.toLowerCase().endsWith('flipcoin')) {
             channel.send('Its a virtual coin... that you flip... so... heads or tails?')
         }else{
             message.reply(`Please use the valid syntax: ${syntax}`)
