@@ -4,7 +4,8 @@ const fs = require('fs')
 exports.code = function(){
 
     function Timer(){
-        const Timer = setTimeout(timeup, durations[durationType]);
+        var Timer = setTimeout(timeup, durations[durationType]);
+        Timer;
     }
     function timeup() {
         target.roles.add(role)
@@ -41,7 +42,7 @@ exports.code = function(){
     });
 
     command(client, 'mute', async message => {
-        const syntax = '/mute <@> <duration><m,h,d,l>'
+        const syntax = '/mute <@> <duration> <m,h,d,l>'
         const { member, channel, content, mentions } = message
         if (!message.member.hasPermission('MANAGE_MESSAGES')){
             channel.send('You do not have permission to run the command')
@@ -49,7 +50,7 @@ exports.code = function(){
         }
 
         const split = content.trim().split(' ')
-        if (split.length !== 3){
+        if (split.length !== 4){
             channel.send('please use the correct command syntax: ' + syntax)
             return;
         }
@@ -91,8 +92,7 @@ exports.code = function(){
             target.roles.remove(role)
         }
         target.roles.add(muterole)
-        var Timer = setTimeout(timeup, durations[durationType])
-        Timer;
+        Timer();
     })
 
     command(client, 'unmute', message =>{
