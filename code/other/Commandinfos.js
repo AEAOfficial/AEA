@@ -3,14 +3,13 @@ const { Client, MessageAttachment, RichEmbed } = require('discord.js');
 const command = require('./command.js')
 const fs = require('fs')
 exports.code = function(){
-    command(client, 'timer',  async message => {
+    command(client, 'info',  async message => {
         const { member, channel, content, mentions } = message
         const syntax = '/info <command>'
-        if(message.content.endsWith('')){
-            message.reply(`Please use the valid syntax: ${syntax}`)
-        }
         if(message.content.endsWith('aeaelites')) {
             channel.send('Hands out a free copy of AEAElites!')
+        }else{
+            message.reply(`Please use the valid syntax: ${syntax}`)
         }
     })
 }
