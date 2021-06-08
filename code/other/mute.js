@@ -4,6 +4,12 @@ const fs = require('fs')
 exports.code = function(){
 
     function Timer(){
+        const durations = {
+            m: 60,
+            h: 60 * 60,
+            d: 60 * 60 * 24,
+            l: -1
+        }
         var Timer = setTimeout(timeup, durations[durationType]);
         Timer;
     }
