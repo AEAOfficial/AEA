@@ -6,4 +6,6 @@ enhance gameplay by balancing current units, all while adding new ones.
 ## About the Author
 Skaarjlord is a balancer, not a modder. Most of the units used are not taken, but contributed from other authors on
 the steam workshop.
-
+## About this bot
+All code is made by the devs of AEA mainly LemonsHQ and
+Skaarjlord has no rights or permission to redistribute, copy, change, modify this code.
