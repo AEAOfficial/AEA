@@ -8,4 +8,4 @@ Skaarjlord is a balancer, not a modder. Most of the units used are not taken, bu
 the steam workshop.
 ## About this bot
 All code is made by the devs of AEA mainly LemonsHQ and
-Skaarjlord has no rights or permission to redistribute, copy, change, or modify this code.
+Skaarjlord has no rights or permission to redistribute, copy, change, or modify this code in any fashion.
