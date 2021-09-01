@@ -4,7 +4,7 @@ global.client = new Discord.Client();
 client.setMaxListeners(0)
 
 //var process = require('./process.env')
-process.code();
+//process.code();
 client.login(process.env.BOT_TOKEN);
 
 
