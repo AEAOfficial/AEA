@@ -3,9 +3,9 @@ global.Discord = require('discord.js');
 global.client = new Discord.Client();
 client.setMaxListeners(0)
 
-var process = require('./process.env')
+//var process = require('./process.env')
 process.code();
-client.login(BOT_TOKEN);
+client.login(BOT_TOKEN.process.env);
 
 
 
