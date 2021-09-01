@@ -3,9 +3,15 @@ global.Discord = require('discord.js');
 global.client = new Discord.Client();
 client.setMaxListeners(0)
 
+<<<<<<< Updated upstream
 //var process = require('./process.env')
 //process.code();
 client.login(process.env.BOT_TOKEN);
+=======
+var process = require('./process.env')
+process.code();
+client.login(BOT_TOKEN);
+>>>>>>> Stashed changes
 
 
 
