@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'mechheavymissile') { 
+            if (message.content.toLowerCase() === '/mechheavymissile') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(mechHeavyMissile); 
 	          }
 	 });
@@ -24,7 +25,6 @@ const mechHeavyMissile = new Discord.MessageEmbed()
    .addField('Area Damage:  45','\u2800')
    .addField('Direct Damage:  200','\u2800')
    .addField('Area Damage:  40','\u2800')
-   .addField('Direct Damage:  35','\u2800')
    .addField('Move Speed:  2.9','\u2800')
    .addField('Turn Speed:  1.0','\u2800')
    .setTimestamp() 

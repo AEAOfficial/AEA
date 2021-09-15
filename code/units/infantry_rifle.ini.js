@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'rifleinfantry') { 
+            if (message.content.toLowerCase() === '/rifleinfantry') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(rifleInfantry); 
 	          }
 	 });
@@ -14,7 +15,7 @@ const rifleInfantry = new Discord.MessageEmbed()
    .setImage('attachment://85.png') 
    .setTitle(' Rifleman') 
    .setDescription(' -Lightly armored infantry\n-Battle-rifle\n- Can only attack ground') 
-   .addField('Price:  75','\u2800')
+   .addField('Price:  65','\u2800')
    .addField('Health:  15','\u2800')
    .addField('Range:  140','\u2800')
    .addField('Direct Damage:  6','\u2800')

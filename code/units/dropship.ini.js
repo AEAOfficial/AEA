@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'dropship') { 
+            if (message.content.toLowerCase() === '/dropship') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(dropship); 
 	          }
 	 });
@@ -14,10 +15,10 @@ const dropship = new Discord.MessageEmbed()
    .setImage('attachment://4.png') 
    .setTitle(' Dropship') 
    .setDescription(' -Transports up to 4 units\n-Cannot attack') 
-   .addField('Price:  800','\u2800')
+   .addField('Price:  1000','\u2800')
    .addField('Health:  700','\u2800')
    .addField('Range:  0','\u2800')
-   .addField('Move Speed:  2.3','\u2800')
+   .addField('Move Speed:  2.0','\u2800')
    .addField('Turn Speed:  1.4','\u2800')
    .setTimestamp() 
    .setFooter('SkaarjLord', 'https://imgur.com/QMVH0Hq.png');

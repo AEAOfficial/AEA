@@ -2,8 +2,9 @@
    .setDescription(' [Deployed]\n- An Absolute Unit.\n- Can attack Ground & Air\n- VERY Heavily armed and armored\n- Can run over smaller units\n- Deploy to activate Singularity Cannon\n- Cannot attack air while deployed') 
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'none') { 
+            if (message.content.toLowerCase() === '/none') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(NONE); 
 	          }
 	 });

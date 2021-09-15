@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'battlecruiser') { 
+            if (message.content.toLowerCase() === '/battlecruiser') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(BattleCruiser); 
 	          }
 	 });
@@ -13,7 +14,7 @@ const BattleCruiser = new Discord.MessageEmbed()
    .attachFiles(['./code/units/resources/42.png']) 
    .setImage('attachment://42.png') 
    .addField('Price:  9000, uranium=50','\u2800')
-   .addField('Health:  7000','\u2800')
+   .addField('Health:  6500','\u2800')
    .setTitle(' Battle Cruiser') 
    .setDescription('- Heavily armoured\n- Can attack attack land, air, and subs\n- Slow firing rate') 
    .addField('Range:  330','\u2800')

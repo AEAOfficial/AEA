@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'firebee') { 
+            if (message.content.toLowerCase() === '/firebee') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(fireBee); 
 	          }
 	 });
@@ -13,7 +14,7 @@ const fireBee = new Discord.MessageEmbed()
    .attachFiles(['./code/units/resources/151.png']) 
    .setImage('attachment://151.png') 
    .setTitle(' Fire bee') 
-   .setDescription(' -Heavily armed \n -Can attack ground \n -Medium air attack \n -Needs to reload after firing \n -Self repair\n- Minor Nuclear detonation on death') 
+   .setDescription(' -Heavily armed \n -Can attack ground \n -Medium air attack \n -Needs to reload after firing \n -Self repair\n- Minor Nuclear detonation on death\n- Can only have 20 built at a time') 
    .addField('Price:  11000, uranium=150','\u2800')
    .addField('Health:  4900','\u2800')
    .addField('Range:  210','\u2800')

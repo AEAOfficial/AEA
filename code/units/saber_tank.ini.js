@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'sabertank') { 
+            if (message.content.toLowerCase() === '/sabertank') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(saberTank); 
 	          }
 	 });
@@ -19,7 +20,7 @@ const saberTank = new Discord.MessageEmbed()
    .addField('Range:  180','\u2800')
    .addField('Direct Damage:  16','\u2800')
    .addField('Area Damage:  10','\u2800')
-   .addField('Move Speed:  0.6','\u2800')
+   .addField('Move Speed:  0.7','\u2800')
    .addField('Turn Speed:  2.1','\u2800')
    .setTimestamp() 
    .setFooter('SkaarjLord', 'https://imgur.com/QMVH0Hq.png');

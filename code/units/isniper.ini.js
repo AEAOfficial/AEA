@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'isniper') { 
+            if (message.content.toLowerCase() === '/isniper') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(Isniper); 
 	          }
 	 });
@@ -14,7 +15,7 @@ const Isniper = new Discord.MessageEmbed()
    .setImage('attachment://91.png') 
    .setTitle(' Sniper') 
    .setDescription(' - Elite infantry with Anti-Tank Rifle\n- Must be in sniper mode to utilize full range/damage\n -Ground & Air attack\n -Long range\n- Reduced damage to buildings') 
-   .addField('Price:  1000','\u2800')
+   .addField('Price:  750','\u2800')
    .addField('Health:  60','\u2800')
    .addField('Range:  200','\u2800')
    .addField('Direct Damage:  22','\u2800')

@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'dustertank') { 
+            if (message.content.toLowerCase() === '/dustertank') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(dusterTank); 
 	          }
 	 });
@@ -14,7 +15,7 @@ const dusterTank = new Discord.MessageEmbed()
    .setImage('attachment://25.png') 
    .setTitle(' Duster') 
    .setDescription(' -Medium armour\n-Ground attack\n-Armed with twin autocannons') 
-   .addField('Price:  3000','\u2800')
+   .addField('Price:  3500','\u2800')
    .addField('Health:  1100','\u2800')
    .addField('Range:  200','\u2800')
    .addField('Direct Damage:  40','\u2800')

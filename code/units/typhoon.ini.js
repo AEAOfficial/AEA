@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'ektyphoon') { 
+            if (message.content.toLowerCase() === '/ektyphoon') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(EkTyphoon); 
 	          }
 	 });
@@ -15,7 +16,7 @@ const EkTyphoon = new Discord.MessageEmbed()
    .setTitle(' Typhoon') 
    .setDescription(' -Landing assault craft\n- Fast\n-Very light Mounted machine-guns\n-Carries 4 units') 
    .addField('Price:  1000','\u2800')
-   .addField('Health:  300','\u2800')
+   .addField('Health:  500','\u2800')
    .addField('Range:  140','\u2800')
    .addField('Direct Damage:  8','\u2800')
    .addField('Move Speed:  1.6','\u2800')

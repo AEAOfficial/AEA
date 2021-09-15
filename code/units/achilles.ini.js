@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'achillestank') { 
+            if (message.content.toLowerCase() === '/achillestank') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(achillesTank); 
 	          }
 	 });
@@ -14,7 +15,7 @@ const achillesTank = new Discord.MessageEmbed()
    .setImage('attachment://20.png') 
    .setTitle(' Achilles') 
    .setDescription(' - Powerful artillery cannon\n- Cannot hit air\n- Single Target\n- Medium armour') 
-   .addField('Price:  4500','\u2800')
+   .addField('Price:  5500','\u2800')
    .addField('Health:  900','\u2800')
    .addField('Range:  280','\u2800')
    .addField('Direct Damage:  275','\u2800')

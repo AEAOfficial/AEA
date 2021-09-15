@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'jetpack') { 
+            if (message.content.toLowerCase() === '/jetpack') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(jetpack); 
 	          }
 	 });
@@ -14,9 +15,9 @@ const jetpack = new Discord.MessageEmbed()
    .setImage('attachment://83.png') 
    .setTitle(' Pegasus') 
    .setDescription(' -Advanced armored infantry\n-Light plasma rifles\n-Short-range jetpack') 
-   .addField('Price:  1500','\u2800')
-   .addField('Health:  150','\u2800')
-   .addField('Range:  250','\u2800')
+   .addField('Price:  1100','\u2800')
+   .addField('Health:  100','\u2800')
+   .addField('Range:  200','\u2800')
    .addField('Direct Damage:  11','\u2800')
    .addField('Move Speed:  0.8','\u2800')
    .addField('Turn Speed:  7.5','\u2800')

@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'heavyrpg') { 
+            if (message.content.toLowerCase() === '/heavyrpg') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(heavyRPG); 
 	          }
 	 });
@@ -15,7 +16,7 @@ const heavyRPG = new Discord.MessageEmbed()
    .setTitle(' Heavy RPG Infantry') 
    .setDescription(' - Devastating infantry AT rocket\n- Long range\n- Can attack ground & air\n- Low health\n- Slow firing rate') 
    .addField('Price:  750','\u2800')
-   .addField('Health:  120','\u2800')
+   .addField('Health:  105','\u2800')
    .addField('Range:  280','\u2800')
    .addField('Direct Damage:  1','\u2800')
    .addField('Area Damage:  165','\u2800')

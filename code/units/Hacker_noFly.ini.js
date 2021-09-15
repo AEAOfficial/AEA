@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'hackernofly') { 
+            if (message.content.toLowerCase() === '/hackernofly') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(hackerNoFly); 
 	          }
 	 });
@@ -15,7 +16,7 @@ const hackerNoFly = new Discord.MessageEmbed()
    .addField('Price:  3800','\u2800')
    .addField('Health:  80','\u2800')
    .setTitle(' Hacker') 
-   .setDescription('- (Flying fortress Fix)\n- Can jump into enemy buildings/vehicles and turn them to your team\n- Slow, weak, cant attack\n- Must get melee distance to target\n- Can only have 8 built at a time') 
+   .setDescription('- (Flying fortress Fix)\n- Can jump into enemy buildings/vehicles and turn them to your team\n- Slow, weak, cant attack\n- Must get melee distance to target\n- Can only have 1 built at a time') 
    .addField('Range:  9','\u2800')
    .addField('Direct Damage:  0','\u2800')
    .addField('Move Speed:  0.8','\u2800')

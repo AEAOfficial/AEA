@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'antiairmech') { 
+            if (message.content.toLowerCase() === '/antiairmech') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(antiAirMech); 
 	          }
 	 });
@@ -17,11 +18,11 @@ const antiAirMech = new Discord.MessageEmbed()
    .addField('Price:  950','\u2800')
    .addField('Health:  500','\u2800')
    .addField('Range:  190','\u2800')
-   .addField('Direct Damage:  60','\u2800')
+   .addField('Direct Damage:  70','\u2800')
    .addField('Area Damage:  45','\u2800')
    .addField('Direct Damage:  0','\u2800')
    .addField('Area Damage:  0','\u2800')
-   .addField('Move Speed:  0.8','\u2800')
+   .addField('Move Speed:  0.7','\u2800')
    .setTimestamp() 
    .setFooter('SkaarjLord', 'https://imgur.com/QMVH0Hq.png');
 }

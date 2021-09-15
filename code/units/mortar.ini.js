@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'mortar') { 
+            if (message.content.toLowerCase() === '/mortar') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(mortar); 
 	          }
 	 });
@@ -14,7 +15,7 @@ const mortar = new Discord.MessageEmbed()
    .setImage('attachment://88.png') 
    .setTitle(' Mortar') 
    .setDescription(' -Can attack ground only \n -Long range\n- Weak vs units') 
-   .addField('Price:  120','\u2800')
+   .addField('Price:  175','\u2800')
    .addField('Health:  60','\u2800')
    .addField('Range:  290','\u2800')
    .addField('Area Damage:  74','\u2800')

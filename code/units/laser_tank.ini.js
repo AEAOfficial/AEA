@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'clasertank') { 
+            if (message.content.toLowerCase() === '/clasertank') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(claserTank); 
 	          }
 	 });
@@ -14,7 +15,7 @@ const claserTank = new Discord.MessageEmbed()
    .setImage('attachment://29.png') 
    .setTitle(' Laser Tank') 
    .setDescription(' -Can attack ground and air\n-Weak vs. multiple units\n-Powerful single shot, slow recharge') 
-   .addField('Price:  1200','\u2800')
+   .addField('Price:  1000','\u2800')
    .addField('Health:  500','\u2800')
    .addField('Range:  190','\u2800')
    .addField('Direct Damage:  450','\u2800')

@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'heavytank') { 
+            if (message.content.toLowerCase() === '/heavytank') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(heavyTank); 
 	          }
 	 });
@@ -14,12 +15,12 @@ const heavyTank = new Discord.MessageEmbed()
    .setImage('attachment://27.png') 
    .setTitle(' Heavy Tank') 
    .setDescription(' -Heavily armed\n-Can attack ground\n-Light air attack') 
-   .addField('Price:  750','\u2800')
-   .addField('Health:  500','\u2800')
+   .addField('Price:  800','\u2800')
+   .addField('Health:  575','\u2800')
    .addField('Range:  180','\u2800')
-   .addField('Direct Damage:  52','\u2800')
+   .addField('Direct Damage:  50','\u2800')
    .addField('Direct Damage:  35','\u2800')
-   .addField('Move Speed:  0.75','\u2800')
+   .addField('Move Speed:  0.8','\u2800')
    .addField('Turn Speed:  1.9','\u2800')
    .setTimestamp() 
    .setFooter('SkaarjLord', 'https://imgur.com/QMVH0Hq.png');

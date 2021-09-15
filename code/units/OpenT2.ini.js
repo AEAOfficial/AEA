@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'openwallt2') { 
+            if (message.content.toLowerCase() === '/openwallt2') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(openWallT2); 
 	          }
 	 });
@@ -10,8 +11,8 @@ const openWallT2 = new Discord.MessageEmbed()
    .setColor('#1500f7') 
    .setAuthor('Lemons#5444', 'https://imgur.com/6NICs3U.png') 
    .setThumbnail('https://camo.githubusercontent.com/7203f752f0f936475f4ac41dcd3ef9d93af9c2452176a05a1e2b081d1a255ef1/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f69636f6e732f3630363538363230323934323037393031372f34323362346662626563663162626164353566653631343638303337623334642e776562703f73697a653d313238')
-   .attachFiles(['./code/units/resources/234.png']) 
-   .setImage('attachment://234.png') 
+   .attachFiles(['./code/units/resources/238.png']) 
+   .setImage('attachment://238.png') 
    .setTitle(' Open Wall - T2') 
    .setDescription(' -Prevents the passage of enemy units\n-Heavily armored') 
    .addField('Price:  850','\u2800')

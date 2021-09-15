@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'mothership') { 
+            if (message.content.toLowerCase() === '/mothership') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(mothership); 
 	          }
 	 });
@@ -14,7 +15,7 @@ const mothership = new Discord.MessageEmbed()
    .setImage('attachment://158.png') 
    .setTitle(' Mothership') 
    .setDescription(' - The Ultimate Carrier\n- Rapid build T3 Mobile Mech Factory\n- Can transport up to 16 unit slots\n- Can attack air when flying\n- Ground & Air attack while landed\n- Built in fabricator\n- Very powerful long range attack\n- Can only have 5 built at a time.') 
-   .addField('Price:  150000, uranium=10000','\u2800')
+   .addField('Price:  175000, uranium=10000','\u2800')
    .addField('Health:  18000','\u2800')
    .addField('Range:  320','\u2800')
    .addField('Direct Damage:  55','\u2800')

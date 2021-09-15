@@ -1,7 +1,8 @@
 exports.code = function(){ 
     client.on('message', message => {
-            if (message.content.toLowerCase() === 'heavymech') { 
+            if (message.content.toLowerCase() === '/heavymech') { 
               if(message.author.bot) return; 
+              if(message.channel.id === '711753641433759774' || message.channel.id === '606586202942079023') return; 
               message.channel.send(heavyMech); 
 	          }
 	 });
@@ -14,7 +15,7 @@ const heavyMech = new Discord.MessageEmbed()
    .setImage('attachment://104.png') 
    .setTitle(' Heavy Mech') 
    .setDescription(' -Heavily armored\n-Ground attack\n-Moderate damage and range\n-Can disable weapon to activate a temporary shield and self-repair') 
-   .addField('Price:  5000','\u2800')
+   .addField('Price:  6000','\u2800')
    .addField('Health:  1800','\u2800')
    .addField('Range:  250','\u2800')
    .addField('Direct Damage:  125','\u2800')
