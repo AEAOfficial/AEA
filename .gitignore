@@ -1,9 +1,9 @@
 # Config files
 /node_modules
-config.json
 *process.env
 resources/music/config.txt
 resources/music/serversettings.json
 resources/music/config.txt
 resources/music/config.txt
 New folder.zip
+test-db.sqlite
